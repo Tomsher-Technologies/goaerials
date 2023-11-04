@@ -1,9 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\ServiceController;
-use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\HomeBannerController;
+
 use App\Http\Controllers\Admin\Users\ProfileController;
 use App\Http\Controllers\Admin\Users\UserController;
 use App\Http\Controllers\Admin\PagesController;
@@ -44,21 +43,11 @@ Route::group(['prefix' => env('ADMIN_PREFIX', 'admin'), 'as' => 'admin.'], funct
         // All Users 
         Route::resource('users', UserController::class);
 
-        // Home Banners
-        Route::resource('banner', HomeBannerController::class)->except('show');
-
-        // Brands
-        Route::resource('brand', BrandController::class)->except('show');
-
         // Clients
         Route::resource('clients', ClientsController::class)->except('show');
 
         // Services
         Route::resource('services', ServiceController::class)->except('show');
-
-        Route::resource('careers', CareerController::class);
-        Route::post('careers/change_status', [CareerController::class, 'change_status'])->name('careers.change_status');
-        Route::get('/careers/view/{id}', [CareerController::class, 'viewApplications'])->name('careers.view');
 
         // Reels
         Route::resource('reels', ReelsController::class)->except('show');
