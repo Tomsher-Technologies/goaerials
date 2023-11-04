@@ -26,6 +26,7 @@ use Artesaos\SEOTools\Facades\TwitterCard;
 use Artesaos\SEOTools\Facades\JsonLd;
 use Artesaos\SEOTools\Facades\JsonLdMulti;
 use Artesaos\SEOTools\Facades\SEOTools;
+use App\Mail\ContactEnquiry;
 use Illuminate\Support\Facades\URL;
 use Storage;
 use Validator;
@@ -158,19 +159,23 @@ class FrontendController extends Controller
         $con->message = $request->message;
         $con->save();
 
+        Mail::to(env('MAIL_ADMIN'))->queue(new ContactEnquiry($con));
+
         return redirect()->back()->with([
             'status' => "Thank you for getting in touch. Our team will contact you shortly."
         ]);
    }
-
-    
 
     public function changeLanguage(Request $request)
     {
         Session::put('locale', $request->locale);
     }
 
-  
+    public function social(){
+        $page = Pages::with(['seo'])->where('page_name','reels')->first();
+        $this->loadSEO($page);
+        return view('frontend.social', compact('page'));
+    }
 
     
 
