@@ -81,7 +81,7 @@
 
                               <li class="ms-auto"><a class="nav-link {{ request()->routeIs('reels') ? 'active' : '' }}" href="{{ route('reels') }}">{{ __('Reels') }}</a></li>
 
-                              <li><a class="nav-link" href="#">Social</a></li>
+                              <li><a class="nav-link  {{ request()->routeIs('social') ? 'active' : '' }}" href="{{ route('social') }}">Social</a></li>
 
                               <li><a class="nav-link {{ request()->routeIs('contact_us') ? 'active' : '' }}" href="{{ route('contact_us') }}">{{ __('Contact Us') }}</a></li>
                               

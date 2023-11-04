@@ -29,6 +29,8 @@
         $bodyClass = 'reel-page-body';
     }elseif(request()->routeIs('contact_us')){
         $bodyClass = 'contact-page-body';
+    }elseif(request()->routeIs('social')){
+        $bodyClass = 'contact-page-body';
     }else{
         $bodyClass = '';
     }
@@ -60,11 +62,13 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     
     <script src="{{ asset('assets/js/jquery.youtube-background.js_v=1.0.18') }}"></script>
-      <script type="text/javascript">
-         jQuery(document).ready(function() {
-               jQuery('[data-vbg]').youtube_background();
-         });
-     </script>
+
+    @stack('footer')
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery('[data-vbg]').youtube_background();
+        });
+    </script>
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,

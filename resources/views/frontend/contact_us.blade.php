@@ -73,8 +73,6 @@
 @endsection
 
 @push('header')
-@livewireScripts
-@livewireStyles
 
 <style>
 .hide {
