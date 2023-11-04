@@ -9,7 +9,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => 'Al Douri', // set false to total remove
+            'title'        => 'Go Aerials', // set false to total remove
             'titleBefore'  => true, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => '', // set false to total remove
             'separator'    => ' - ',

@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Image<span class="error">*</span></label>
+                                <label for="exampleInputEmail1">Image<span class="error">*</span> <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 520x700 pixels)</span></label>
                                 <div class="input-group mb-3">
                                     <div class="custom-file">
                                         <input name="image" id="image" type="file" class="custom-file-input"

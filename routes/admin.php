@@ -83,11 +83,8 @@ Route::group(['prefix' => env('ADMIN_PREFIX', 'admin'), 'as' => 'admin.'], funct
             Route::get('/reels', [PagesController::class, 'reelsPage'])->name('reels');
             Route::post('/store-reels', [PagesController::class, 'storeReelsPage'])->name('store-reels');
 
-            Route::get('/news', [PagesController::class, 'newsPage'])->name('news');
-            Route::post('/store-news', [PagesController::class, 'storeNewsPage'])->name('store-news');
-
-            Route::get('/career', [PagesController::class, 'careerPage'])->name('career');
-            Route::post('/store-career', [PagesController::class, 'storeCareerPage'])->name('store-career');
+            Route::get('/social', [PagesController::class, 'socialPage'])->name('social');
+            Route::post('/store-social', [PagesController::class, 'storeSocialPage'])->name('store-social');
         });
 
         Route::resource('roles', RoleController::class);

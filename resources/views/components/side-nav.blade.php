@@ -113,6 +113,12 @@
                     </a>
                 </li>
 
+                <li class="{{ (request()->routeIs('admin.page.social') ) ? 'active' : '' }}">
+                    <a href="{{ route('admin.page.social') }}">
+                        <i class="simple-icon-doc"></i> <span class="d-inline-block">Social</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>

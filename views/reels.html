@@ -1,23 +1,34 @@
-<header class="main-header">
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- CSS -->
+      <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/jquery.pagepiling.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <title>Go Aerials</title>
+   </head>
+   <body class="reel-page-body">
+
+       
+      <header class="main-header">
          <div class="container-fluid">
             <div class="row align-items-center">
                <div class="col-md-1">
                   <div class="social-links-top">
-                  @php  
-                     $general = getSettings();
-                  @endphp
                      <ul>
                         <li>
-                           <a href="{{ $general->facebook ?? '#'  }}">
-                              <? //xml version="1.0" encoding="utf-8" ?>
+                           <a href="#">
+                              <?xml version="1.0" encoding="utf-8"?>
                               <svg fill="#fff" width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"/>
                               </svg>
                            </a>
                         </li>
                         <li>
-                           <a href="{{ $general->instagram ?? '#' }}">
-                              <? //xml version="1.0" encoding="UTF-8" standalone="no" ?>
+                           <a href="#">
+                              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                               <svg width="29px" height="29px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#fff">
@@ -35,7 +46,7 @@
                </div>
                <div class="col-md-10">
                   <nav class="navbar navbar-expand-xl navbar-dark">
-                     <a href="{{ route('home') }}" class="navbar-brand">
+                     <a href="index.html" class="navbar-brand">
                         <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264.29 110.11">
                            <defs>
                               <style>.cls-1{fill:#fff;}</style>
@@ -72,20 +83,12 @@
                         </div>
                         <div class="offcanvas-body">
                            <ul class="navbar-nav">
-
-                              <li><a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">{{ __('About us') }}</a></li>
-
-                              <li><a class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}" href="{{ route('services') }}">{{ __('Services') }}</a></li>
-
-                              <li><a class="nav-link  {{ request()->routeIs('clients') ? 'active' : '' }}" href="{{ route('clients') }}">{{ __('Clients') }}</a></li>
-
-                              <li class="ms-auto"><a class="nav-link {{ request()->routeIs('reels') ? 'active' : '' }}" href="{{ route('reels') }}">{{ __('Reels') }}</a></li>
-
-                              <li><a class="nav-link  {{ request()->routeIs('social') ? 'active' : '' }}" href="{{ route('social') }}">{{ __('Social') }}</a></li>
-
-                              <li><a class="nav-link {{ request()->routeIs('contact_us') ? 'active' : '' }}" href="{{ route('contact_us') }}">{{ __('Contact Us') }}</a></li>
-                              
-
+                              <li><a class="nav-link" href="about-us.html">About</a></li>
+                              <li><a class="nav-link" href="services.html">Services</a></li>
+                              <li><a class="nav-link " href="clients.html">Clients</a></li>
+                              <li class="ms-auto"><a class="nav-link" href="reels.html">Reels</a></li>
+                              <li><a class="nav-link" href="#">Social</a></li>
+                              <li><a class="nav-link" href="contact-us.html">Contact</a></li>
                            </ul>
                         </div>
                      </div>
@@ -93,43 +96,111 @@
                </div>
                <div class="col-md-1">
                   <div class="dropdown">
-                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     @if (getActiveLanguage() == 'en')
-                           EN
-                     @else
-                           AR
-                     @endif
+                     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     EN
                      </button>
-                     <ul class="dropdown-menu">
-                       <li><a class="dropdown-item lang-change {{ (getActiveLanguage() == 'en') ? 'active' : '' }}" data-locale="en" href="#">EN</a></li>
-                       <li><a class="dropdown-item lang-change {{ (getActiveLanguage() == 'ar') ? 'active' : '' }}" data-locale="ar" href="#">AR</a></li>
-                     </ul>
-                  </div>
-
-
-                  <!-- <div class="d-flex align-items-center">
-                     <div class="dropdown header-item dropdown-hover-end">
-                         <ul class="list-unstyled hstack gap-2 mb-0">
-                              <li class="d-none d-md-block">
-                                 @if (getActiveLanguage() == 'en')
-                                     <a href="#"  class="lang-swt" >
-                                         <i class="fa-solid fa-language"></i>
-                                         Arabic
-                                     </a>
-                                 @else
-                                     <a href="#"  class="lang-swt" >
-                                         <i class="fa-solid fa-language"></i>
-                                         English
-                                     </a>
-                                 @endif
-                             </li>
-                             <li></li>
-                         </ul>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">EN</a>
+                        <a class="dropdown-item" href="#">AR</a>
                      </div>
-                 </div> -->
-
-
+                  </div>
                </div>
             </div>
          </div>
       </header>
+        <div id="pagepiling">
+ 
+ 
+  
+
+         <!-- Reels-->  
+         <section id="reels" class="section pp-scrollable position-absolute">
+            <div class="intro">
+               <div class="scroll-wrap">
+                  <div class="container">
+                     <h2 class="mb-5 mb-md-4">Reels</h2>
+                     <div class="home-demo">
+                        <div class="owl-carousel owl-theme">
+                           <div class="item">
+                              <img src="img/reel-img-1.jpg" class="img-fluid" alt="">
+                              <h5 class="reel-title">FPV Reel 2023  </h5>
+                              <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI"><i class="bi bi-play"></i></a>
+                           </div>
+                           <div class="item">
+                              <img src="img/reel-img-2.jpg" class="img-fluid" alt="">
+                              <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI"><i class="bi bi-play"></i></a>
+                              <h5 class="reel-title">FPV Reel 2023  </h5>
+                           </div>
+                           <div class="item">
+                              <img src="img/reel-img-3.jpg" class="img-fluid" alt="">
+                              <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI"><i class="bi bi-play"></i></a>
+                              <h5 class="reel-title">FPV Reel 2023  </h5>
+                           </div>
+                           <div class="item">
+                              <img src="img/reel-img-4.jpg" class="img-fluid" alt="">
+                              <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI"><i class="bi bi-play"></i></a>
+                              <h5 class="reel-title">FPV Reel 2023  </h5>
+                           </div>
+                           <div class="item">
+                              <img src="img/reel-img-1.jpg" class="img-fluid" alt="">
+                              <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI"><i class="bi bi-play"></i></a>
+                              <h5 class="reel-title">FPV Reel 2023  </h5>
+                           </div>
+                           <div class="item">
+                              <img src="img/reel-img-2.jpg" class="img-fluid" alt="">
+                              <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI"><i class="bi bi-play"></i></a>
+                              <h5 class="reel-title">FPV Reel 2023  </h5>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+      </div>
+      <!-- Scrollbar -->
+      <div class="progress-nav">
+         <ul class="navbar-nav">
+            <li data-menuanchor="home" class="active"></li>
+            <li data-menuanchor="about"></li>
+            <li data-menuanchor="services"></li>
+            <li data-menuanchor="why-choose"></li>
+            <li data-menuanchor="partners"></li>
+            <li data-menuanchor="reels"></li>
+            <li data-menuanchor="contact"></li>
+         </ul>
+      </div>
+      <p class="copy-right">© Go Aerials. 2023. all Rights Reserved. Designed by <a href="https://www.tomsher.com/" target="_blank">Tomsher</a></p>
+      <!-- Optional JavaScript -->
+      <script src="js/jquery-1.12.4.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.pagepiling.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+      <script src="js/custom.js"></script>
+      <script>
+        $('.owl-carousel').owlCarousel({
+         loop:true,
+         margin:10,
+         nav:true,
+         dots:false,
+         autoplay:true,
+     autoplayTimeout:1500,
+         responsive:{
+             0:{
+                 items:1
+             },
+             600:{
+                 items:2
+             },
+             1000:{
+                 items:4
+             }
+         }
+     })
+ 
+ </script>
+   </body>
+</html>
