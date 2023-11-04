@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center">
-                                <a href="{{ route('password.request') }}">Forget password?</a>
+                                <!-- <a href="{{ route('password.request') }}">Forget password?</a> -->
                                 <button class="btn btn-primary btn-lg btn-shadow" type="submit">LOGIN</button>
                             </div>
                         </form>
