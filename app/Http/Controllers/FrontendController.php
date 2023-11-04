@@ -172,7 +172,7 @@ class FrontendController extends Controller
     }
 
     public function social(){
-        $page = Pages::with(['seo'])->where('page_name','reels')->first();
+        $page = Pages::with(['seo'])->where('page_name','social')->first();
         $this->loadSEO($page);
         return view('frontend.social', compact('page'));
     }
