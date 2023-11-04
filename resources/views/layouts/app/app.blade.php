@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all">
     {!! SEO::generate() !!}
-    <link rel="icon" type="image/svg" href="{{ asset('assets/img/favicon.svg') }}">
+    <link rel="icon" type="image/svg" href="{{ asset('adminassets/img/favicon.png') }}">
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&amp;family=Lato:wght@400;700&amp;display=swap"
         rel="stylesheet">
