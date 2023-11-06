@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\URL;
 
 class Address extends Model
 {
@@ -24,5 +25,10 @@ class Address extends Model
         }
 
         return $this->$field;
+    }
+
+    public function getImage()
+    {
+        return $this->image ? URL::to($this->image) : asset('adminassets/img/placeholder.png');
     }
 }

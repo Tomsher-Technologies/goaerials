@@ -1,11 +1,12 @@
-<section id="reels" class="section pp-scrollable position-absolute">
+    @php 
+        $pageData = getPageData('reels');
+        $reels = getReels();
+    @endphp
+<section id="reels" class="section pp-scrollable position-absolute" style="background-image:url({{ asset($pageData->image1) }});">
         <div class="intro">
             <div class="scroll-wrap">
                 <div class="container">
-                    @php 
-                        $pageData = getPageData('reels');
-                        $reels = getReels();
-                    @endphp
+                   
                     <h2 class="mb-5 mb-md-3">{{ $pageData->getTranslation('title') ?? ''}}</h2>
                     <div class="home-demo">
                         <div class="owl-carousel owl-theme">

@@ -1,12 +1,14 @@
-<section id="partners" class="section pp-scrollable position-absolute">
+    @php 
+        $pageData = getPageData('clients');
+        $clients = getClients();
+    @endphp
+
+<section id="partners" class="section pp-scrollable position-absolute" style="background-image:url({{ asset($pageData->image1) }});">
         <div class="intro">
             <div class="scroll-wrap">
                 <div class="container">
 
-                    @php 
-                        $pageData = getPageData('clients');
-                        $clients = getClients();
-                    @endphp
+                 
 
                     <h2 class="mb-3 text-white text-start"> {{ $pageData->getTranslation('title') ?? '' }}</h2>
                     <div class="row g-1 align-items-center ">

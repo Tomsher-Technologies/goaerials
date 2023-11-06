@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\URL;
 
 class Contact extends Model
 {
@@ -17,4 +18,9 @@ class Contact extends Model
         'subject',
         'message',
     ];
+
+    public function getImage()
+    {
+        return $this->image ? URL::to($this->image) : asset('adminassets/img/placeholder.png');
+    }
 }

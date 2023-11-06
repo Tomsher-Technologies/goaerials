@@ -3,8 +3,10 @@
      <!-- Masthead -->
      <section id="home" class="navbar-is-white text-white pp-scrollable d-flex align-items-center section position-absolute" role="main">
     
-        <div id="vbg" data-vbg-mobile="true" data-vbg-load-background="true" data-vbg="{{ $page->video_link }}"></div>
-
+        
+        <video autoplay muted loop id="myVideo">
+            <source src="{{ $page->video_link }}" type="video/mp4">
+        </video>
         <div class="intro">
             <div class="scroll-wrap">
                 <div class="container-fluid">

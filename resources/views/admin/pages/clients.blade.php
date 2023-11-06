@@ -33,6 +33,24 @@
                                 <x-input-error name='ar_title' />
                             </div>
 
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x600 pixels)</span></label>
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input name="image" class="img" type="file" class="custom-file-input"
+                                            id="image1" accept="image/*">
+                                        <label class="custom-file-label" for="image1">Choose
+                                            file</label>
+                                    </div>
+                                </div>
+                                <x-input-error name='image' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Current Image</label>
+                                <img class="img-custom form-control" src="{{ $data->getImage1('image1') }}" alt="">
+                            </div>
+
                             @include('admin.common.seo_form')
 
                             <button type="submit" class="btn btn-primary mb-0">Update</button>

@@ -1,6 +1,9 @@
 @extends('layouts.app.app')
 @section('content')
 <section class="about-page section pp-scrollable position-absolute">
+    <video autoplay muted loop id="myVideo">
+        <source src="{{$page->video_link}}" type="video/mp4">
+    </video>
     <div class="intro">
         <div class="scroll-wrap">
             <div class="container">
