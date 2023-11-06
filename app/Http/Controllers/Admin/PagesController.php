@@ -40,7 +40,7 @@ class PagesController extends Controller
         $request->validate([
                         'main_title' => 'required',
                         'ar_main_title' => 'required',
-                        'video_link' => 'required',
+                        'video_link' => 'nullable',
                         'about_title' => 'required',
                         'ar_about_title' => 'required',
                         'about_description' => 'required',
@@ -100,6 +100,8 @@ class PagesController extends Controller
             $video_link = uploadImage($request, 'video_link', 'pages/home');
             deleteImage($pageData->video_link);
             $data['video_link'] = $video_link;
+        }else{
+            $data['video_link'] = $pageData->video_link;
         }
 
         $this->savePageSettings($data);
@@ -219,6 +221,10 @@ class PagesController extends Controller
 
     public function storeAboutPage(Request $request)
     {
+        // echo '<pre>';
+        // print_r($request->all());
+        // die;
+
         $request->validate([
                         'first_title' => 'required',
                         'ar_first_title' => 'required',
@@ -251,7 +257,7 @@ class PagesController extends Controller
                         'first_image' => 'nullable|max:1024',
                         'vision_image' => 'nullable|max:1024',
                         'mission_image' => 'nullable|max:1024',
-                        'video_link' => 'required'
+                        'video_link' => 'nullable'
                     ],[
                         '*.required' => 'This field is required.',
                         '*.uploaded' => "Maximum file size to upload is 1 MB."
@@ -316,11 +322,15 @@ class PagesController extends Controller
         }
 
         if ($request->hasFile('video_link')) {
+           
             $video_link = uploadImage($request, 'video_link', 'pages/about');
             deleteImage($pageData->video_link);
             $data['video_link'] = $video_link;
+        }else{
+            $data['video_link'] = $pageData->video_link;
         }
-        
+        // print_r($data);
+        // die;
         $this->savePageSettings($data);
         return redirect()->back()->with([
             'status' => "Page details updated"
