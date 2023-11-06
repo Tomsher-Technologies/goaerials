@@ -41,10 +41,16 @@
                                 <x-input-error name='image' />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group d-none">
                                 <label for="exampleInputEmail1">Video Link<span class="error">*</span></label>
                                 <input type="text" name="link" class="form-control" value="{{ old('link') }}">
                                 <x-input-error name='link' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Video<span class="error">*</span></label>
+                                <input type="file" name="video" accept="video/mp4,video/x-m4v,video/*" class="form-control" value="{{ old('video') }}">
+                                <x-input-error name='video' />
                             </div>
 
                             <div class="form-group">
