@@ -36,21 +36,24 @@ class ReelsController extends Controller
      */
     public function store(Request $request)
     {
+        // echo php_info();
+        // die;
         $request->validate([
             'image' => 'required|max:1024',
             'title' => 'required',
             'ar_title' => 'required',
-            'link' => 'required',
+            'video' => 'required|max:2048',
             'sort_order' => 'nullable|integer',
             'status' => 'required'
         ],[
             'ar_title.required' => 'The arabic title field is required.',
-            'image.uploaded' => 'File size should be less than 1 MB'
+            'image.uploaded' => 'File size should be less than 1 MB',
+            'video.uploaded' => 'video size should be less than 1 MB',
         ]);
         $data = [
             'title' => $request->title,
             'ar_title' => $request->ar_title,
-            'link' => $request->link,
+            // 'link' => $request->link,
             'sort_order' => ($request->sort_order != '') ? $request->sort_order : 0,
             'is_active' => $request->status,
         ];
@@ -58,7 +61,9 @@ class ReelsController extends Controller
         $reels = Reels::create($data);
 
         $image = uploadImage($request, 'image', 'reels');
+        $video = uploadImage($request, 'video', 'reels');
 
+        $reels->link = $video;
         $reels->image = $image;
         $reels->save();
 
