@@ -101,7 +101,7 @@ class PagesController extends Controller
             deleteImage($pageData->video_link);
             $data['video_link'] = $video_link;
         }else{
-            $data['video_link'] = $pageData->video_link;
+        $data['video_link'] = $pageData->video_link;
         }
 
         $this->savePageSettings($data);
