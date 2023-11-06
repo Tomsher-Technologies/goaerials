@@ -49,7 +49,7 @@
                                 <img class="w-100" src="{{ $reel->getImage() }}" alt="">
                             </div>
 
-                            <div class="form-group d-none">
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Video<span class="error">*</span></label>
                                 <input type="file" name="video" accept="video/mp4,video/x-m4v,video/*" class="form-control" value="{{ old('video') }}">
                                 <x-input-error name='video' />
