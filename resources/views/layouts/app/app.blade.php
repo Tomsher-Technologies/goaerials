@@ -53,7 +53,7 @@
             <li data-menuanchor="contact"></li>
         </ul>
     </div>
-    <p class="copy-right">© <?php echo date('Y'); ?> Go Aerials. {{ __("All Rights Reserved.")  }} {{ __("Designed By")  }} <a href="https://www.tomsher.com/" target="_blank">{{ __("Tomsher")  }}</a></p>
+    <p class="copy-right">© <?php echo date('Y'); ?> Go Aerials.</p>
     <!-- Optional JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
