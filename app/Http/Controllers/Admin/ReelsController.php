@@ -42,13 +42,12 @@ class ReelsController extends Controller
             'image' => 'required|max:1024',
             'title' => 'required',
             'ar_title' => 'required',
-            'video' => 'required|max:2048',
+            'video' => 'required',
             'sort_order' => 'nullable|integer',
             'status' => 'required'
         ],[
             'ar_title.required' => 'The arabic title field is required.',
-            'image.uploaded' => 'File size should be less than 1 MB',
-            'video.uploaded' => 'video size should be less than 1 MB',
+            'image.uploaded' => 'File size should be less than 1 MB'
         ]);
         $data = [
             'title' => $request->title,
@@ -96,7 +95,7 @@ class ReelsController extends Controller
             'image' => 'nullable|max:1024',
             'title' => 'required',
             'ar_title' => 'required',
-            'link' => 'required',
+            // 'link' => 'required',
             'sort_order' => 'nullable|integer',
             'status' => 'required'
         ],[
@@ -106,7 +105,7 @@ class ReelsController extends Controller
        
         $reel->title = $request->title;
         $reel->ar_title = $request->ar_title;
-        $reel->link = $request->link;
+        // $reel->link = $request->link;
         $reel->sort_order = ($request->sort_order != '') ? $request->sort_order : 0;
         $reel->is_active = $request->status;
 
@@ -114,6 +113,12 @@ class ReelsController extends Controller
             $image = uploadImage($request, 'image', 'reels');
             deleteImage($reel->image);
             $reel->image = $image;
+        }
+
+        if ($request->hasFile('video')) {
+            $video = uploadImage($request, 'video', 'reels');
+            deleteImage($reel->link);
+            $reel->link = $video;
         }
 
         $reel->save();
