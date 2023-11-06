@@ -34,10 +34,17 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Video Link</label>
-                                <input type="text" name="video_link" class="form-control"
+                                <label for="exampleInputEmail1">Video</label>
+                                <input type="file"  accept="video/mp4,video/x-m4v,video/*" name="video_link" class="form-control"
                                     value="{{ old('video_link', $data->video_link) }}" >
                                 <x-input-error name='video_link' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Current Video</label><br>
+                                <video  class="w-100" autoplay muted loop id="myVideo">
+                                    <source src="{{ $data->video_link }}" type="video/mp4">
+                                </video>
                             </div>
 
                             <div class="form-group">

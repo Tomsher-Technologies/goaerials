@@ -50,6 +50,19 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Video</label>
+                                <input type="file"  accept="video/mp4,video/x-m4v,video/*" name="video_link" class="form-control" >
+                                <x-input-error name='video_link' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Current Video</label><br>
+                                <video  class="w-100" autoplay muted loop id="myVideo">
+                                    <source src="{{ $data->video_link }}" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <div class="form-group">
                                 <h4>Second Slide Section</h4>
                             </div>
 

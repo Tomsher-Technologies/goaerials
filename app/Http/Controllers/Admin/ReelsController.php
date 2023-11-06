@@ -131,14 +131,16 @@ class ReelsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Reels $reels)
+    public function destroy(Reels $reel)
     {
-        $img = $reels->image;
-        if ($reels->delete()) {
-            deleteImage($img);
+        $image = $reel->image;
+        $video = $reel->link;
+        if ($reel->delete()) {
+            deleteImage($video);
+            deleteImage($image);
         }
         return redirect()->route('admin.reels.index')->with([
-            'status' => "Banner Deleted"
+            'status' => "Reels Deleted"
         ]);
     }
 }

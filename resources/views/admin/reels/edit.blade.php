@@ -56,6 +56,13 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Current Video</label><br>
+                                <video autoplay muted loop id="myVideo" class="w-100">
+                                    <source src="{{ $reel->link }}" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Sort Order</label>
                                 <input type="number" name="sort_order" class="form-control"
                                     value="{{ old('sort_order', $reel->sort_order) }}">
@@ -76,9 +83,19 @@
                             </div>
                             <button type="submit" class="btn btn-primary mb-0">Submit</button>
                             <a href="{{ route('admin.reels.index') }}" class="btn btn-info mb-0">Cancel</a>
+                            <button type="button" id="delete" class="btn btn-danger mb-0 float-right">Delete</button>
                         </form>
                     </div>
                 </div>
+
+                <form id="deleteForm" method="POST"
+                    action="{{ route('admin.reels.destroy', [
+                        'reel' => $reel,
+                    ]) }}"
+                    enctype="multipart/form-data">
+                    @csrf
+                    @method('DELETE')
+                </form>
             </div>
         </div>
     </div>
@@ -98,6 +115,12 @@
                 $('#imgname').text(this.files[0].name)
             } else {
                 $('#imgname').text('Choose file')
+            }
+        });
+
+        $('#delete').on('click', function() {
+            if (confirm('Are you sure you want to remove this item?')) {
+                $('#deleteForm').submit();
             }
         });
     </script>

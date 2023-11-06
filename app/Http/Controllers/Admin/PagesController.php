@@ -15,6 +15,7 @@ use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use Illuminate\Support\Facades\Storage;
 
 class PagesController extends Controller
 {
@@ -61,7 +62,6 @@ class PagesController extends Controller
                 'page_title'        => 'Home',
                 'page_name'         => 'home',
                 'title'             => $request->main_title,
-                'video_link'        => $request->video_link,
                 'sub_title'         => $request->about_title,
                 'description'       => $request->about_description,
                 'heading1'          => $request->background_text,
@@ -94,6 +94,12 @@ class PagesController extends Controller
             $image = uploadImage($request, 'main_image', 'pages/home');
             deleteImage($pageData->image2);
             $data['image2'] = $image;
+        }
+
+        if ($request->hasFile('video_link')) {
+            $video_link = uploadImage($request, 'video_link', 'pages/home');
+            deleteImage($pageData->video_link);
+            $data['video_link'] = $video_link;
         }
 
         $this->savePageSettings($data);
@@ -245,6 +251,7 @@ class PagesController extends Controller
                         'first_image' => 'nullable|max:1024',
                         'vision_image' => 'nullable|max:1024',
                         'mission_image' => 'nullable|max:1024',
+                        'video_link' => 'required'
                     ],[
                         '*.required' => 'This field is required.',
                         '*.uploaded' => "Maximum file size to upload is 1 MB."
@@ -306,6 +313,12 @@ class PagesController extends Controller
             $image = uploadImage($request, 'mission_image', 'pages/about');
             deleteImage($pageData->image3);
             $data['image3'] = $image;
+        }
+
+        if ($request->hasFile('video_link')) {
+            $video_link = uploadImage($request, 'video_link', 'pages/about');
+            deleteImage($pageData->video_link);
+            $data['video_link'] = $video_link;
         }
         
         $this->savePageSettings($data);
@@ -403,6 +416,13 @@ class PagesController extends Controller
                 'seokeywords'          => $request->seokeywords,
         ];
 
+        $pageData = Pages::where('page_name','clients')->first();
+        if ($request->hasFile('image')) {
+            $image = uploadImage($request, 'image', 'pages/clients');
+            deleteImage($pageData->image1);
+            $data['image1'] = $image;
+        }
+
         $this->savePageSettings($data);
         return redirect()->back()->with([
             'status' => "Page details updated"
@@ -418,6 +438,10 @@ class PagesController extends Controller
 
     public function storeContactPage(Request $request)
     {
+        // echo '<pre>';
+        // print_r($request->all());
+        // die;
+
         $request->validate([
                         'title' => 'required',
                         'ar_title' => 'required',
@@ -451,8 +475,38 @@ class PagesController extends Controller
         $addArray = [];
         if($request->has('address')){
             $addresses = $request->address;
-            Address::truncate();
-            Address::insert( $addresses);
+           
+            foreach($addresses as $add){
+                $img = $add['img'];
+                $newimage = '';
+                if (isset($add['image'])) {
+                    
+                    $uploadedFile = $add['image'];
+                    $filename =    strtolower(Str::random(2)).time().'.'. $uploadedFile->getClientOriginalName();
+                    $frontname = Storage::disk('public')->putFileAs(
+                        'pages/contacts',
+                        $uploadedFile,
+                        $filename
+                    );
+                    $image = Storage::url($frontname);
+
+                    if($img != null){
+                        deleteImage($img);
+                    }
+                    $newimage = $image;
+                }
+                $ad = Address::find($add['add_id']);
+                $ad->place_name = $add['place_name'] ?: '';
+                $ad->ar_place_name = $add['ar_place_name'] ?: '';
+                $ad->company_name = $add['company_name'] ?: '';
+                $ad->ar_company_name = $add['ar_company_name'] ?: '';
+                $ad->address = $add['address'] ?: '';
+                $ad->ar_address = $add['ar_address'] ?: '';
+                $ad->email = $add['email'] ?: '';
+                $ad->phone = $add['phone'] ?: '';
+                $ad->image = $newimage ?: $img;
+                $ad->save();
+            }
         }
 
         return redirect()->back()->with([
@@ -487,6 +541,13 @@ class PagesController extends Controller
             'twitter_description'  => $request->twitter_description,
             'seokeywords'          => $request->seokeywords,
         ];
+
+        $pageData = Pages::where('page_name','reels')->first();
+        if ($request->hasFile('image')) {
+            $image = uploadImage($request, 'image', 'pages/reels');
+            deleteImage($pageData->image1);
+            $data['image1'] = $image;
+        }
 
         $this->savePageSettings($data);
 
