@@ -7,7 +7,7 @@
             <div class="scroll-wrap">
                 <div class="container">
                    
-                    <h2 class="mb-5 mb-md-3">{{ $pageData->getTranslation('title') ?? ''}}</h2>
+                    <h2 class="mb-5 mb-md-3 text-white">{{ $pageData->getTranslation('title') ?? ''}}</h2>
                     <div class="home-demo">
                         <div class="owl-carousel owl-theme">
                             @foreach($reels as $key => $value)
