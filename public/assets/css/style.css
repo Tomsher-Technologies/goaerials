@@ -6765,7 +6765,6 @@ margin-top: 0;
 
 }
 
-
 .vision-mission .vision-mission-content {
 background-color: #f2f2f2;
 padding: 30px;
@@ -7059,7 +7058,8 @@ color: #fff;
 
 h5.reel-title {
   font-size: 16px;
-  margin-top: 10px;
+  margin: 0;
+  padding: 15px;
 }
 
 .pp-viewing-about .navbar-nav .nav-link{
@@ -7078,8 +7078,6 @@ body.about-page-body.pp-viewing-why-choose .navbar-nav .nav-link{
 body.contact-page-body.pp-viewing-about .nav-link {
   color: #ffffff;
 }
-
-
 
 .header-nav .nav > li .sub-menu.scroll-menu{
   right: 0;
@@ -7227,6 +7225,7 @@ opacity: 0;
  background-color: #0000008c;
  z-index: -1;
 }
+
 
 .contact-section h4 {
   color: #fff;
