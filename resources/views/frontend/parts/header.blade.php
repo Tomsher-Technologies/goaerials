@@ -75,7 +75,7 @@
 
                               <li><a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">{{ __('About us') }}</a></li>
 
-                              <li><a class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}" href="{{ route('services') }}">{{ __('Services') }}</a></li>
+                              <li><a class="nav-link {{ (request()->routeIs('services') || request()->routeIs('service-details')) ? 'active' : '' }}" href="{{ route('services') }}">{{ __('Services') }}</a></li>
 
                               <li><a class="nav-link  {{ request()->routeIs('clients') ? 'active' : '' }}" href="{{ route('clients') }}">{{ __('Clients') }}</a></li>
 
