@@ -1,5 +1,5 @@
 
-<section id="services" class="navbar-is-white text-white section pp-scrollable position-absolute">
+    <section id="services" class="navbar-is-white text-white section pp-scrollable position-absolute">
         <div class="project-wrap">
             <div class="bg-changer">
                 @php 
@@ -43,4 +43,7 @@
                 </div>
             </div>
         </div>
+        @if(request()->routeIs('home'))
+            <a class="scroll-down"  href="#why-choose"><span></span>Scroll</a>
+        @endif
     </section>

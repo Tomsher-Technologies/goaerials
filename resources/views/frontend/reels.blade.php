@@ -1,6 +1,6 @@
 @extends('layouts.app.app')
 @section('content')
-
-@include('frontend.common.reel')
-
+<div id="pagepiling">
+    @include('frontend.common.reel')
+</div>
 @endsection

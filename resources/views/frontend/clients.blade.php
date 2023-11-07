@@ -1,6 +1,6 @@
 @extends('layouts.app.app')
 @section('content')
-
-@include('frontend.common.client')
-
+<div id="pagepiling">
+    @include('frontend.common.client')
+</div>
 @endsection

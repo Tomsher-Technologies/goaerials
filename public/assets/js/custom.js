@@ -32,7 +32,6 @@
             anchors: ['home', 'about', 'services', 'why-choose', 'partners', 'reels', 'contact'],
             afterRender: function(anchorLink, index){ 
               NavbarColor();
-
             },
             afterLoad: function(anchorLink, index){
                 $('.pp-section .intro').removeClass('animate');
@@ -40,23 +39,56 @@
                 NavbarColor();
             }
         });
+    }
+    if ($('#pagepiling-about').length > 0){
 
-  
-
-        function NavbarColor(){
-         if ($('.pp-section.active').hasClass('navbar-is-white')){
-                $('.navbar-desctop').addClass('navbar-white');
-                $('.progress-nav').addClass('progress-nav-white');
-                $('.navbar-bottom').addClass('navbar-bottom-white');
+        $('#pagepiling-about').pagepiling({
+            scrollingSpeed: 280,
+            navigation:false,
+            menu: '.navbar-nav',
+            anchors: ['about-section-01', 'about-section-02', 'about-section-03', 'about-section-04','about-section-05', 'about-section-06'],
+            afterRender: function(anchorLink, index){ 
+            NavbarColor();
+            },
+            afterLoad: function(anchorLink, index){
+                $('.pp-section .intro').removeClass('animate');
+                $('.active .intro').addClass('animate');
+                NavbarColor();
             }
-            else{
-                $('.navbar-desctop').removeClass('navbar-white');
-                $('.progress-nav').removeClass('progress-nav-white');
-                $('.navbar-bottom').removeClass('navbar-bottom-white');
-            }
-        }
+        });
     }
 
+    if ($('#pagepiling-contact').length > 0){
+
+        $('#pagepiling-contact').pagepiling({
+            scrollingSpeed: 280,
+            navigation:false,
+            menu: '.navbar-nav',
+            anchors: ['contact-section-01', 'contact-section-02', 'contact-section-03', 'contact-section-04'],
+            afterRender: function(anchorLink, index){ 
+            NavbarColor();
+            },
+            afterLoad: function(anchorLink, index){
+                $('.pp-section .intro').removeClass('animate');
+                $('.active .intro').addClass('animate');
+                NavbarColor();
+            }
+        });
+    }
+
+
+    function NavbarColor(){
+        if ($('.pp-section.active').hasClass('navbar-is-white')){
+            $('.navbar-desctop').addClass('navbar-white');
+            $('.progress-nav').addClass('progress-nav-white');
+            $('.navbar-bottom').addClass('navbar-bottom-white');
+        }
+        else{
+            $('.navbar-desctop').removeClass('navbar-white');
+            $('.progress-nav').removeClass('progress-nav-white');
+            $('.navbar-bottom').removeClass('navbar-bottom-white');
+        }
+    }
 
     /* Navbar toggler */
     $('.toggler').on('click',function(){
@@ -148,6 +180,22 @@ $(function () {
       fixedContentPos: false
     });
   });
+
+
+
+  window.onscroll = function () {
+    var height = $(window).height();
+    var scrollTop = $(window).scrollTop();
+    var obj = $('#scroll');
+    var pos = obj.position();
+    if (height + scrollTop < pos.top) {
+       $('.button').fadeIn();
+    }
+    else {
+       $('.button').fadeOut(); 
+    }
+}
+
 
 
 

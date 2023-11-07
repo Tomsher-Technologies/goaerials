@@ -152,7 +152,7 @@ class FrontendController extends Controller
             '*.required' => 'This field is required.'
         ]);
         if ($validator->fails()) {
-            return redirect(url()->previous() .'#why-choose')->withErrors($validator)->withInput();
+            return redirect(url()->previous() .'#contact-section-04')->withErrors($validator)->withInput();
         }
 
         $con = new Contact;
@@ -164,7 +164,7 @@ class FrontendController extends Controller
 
         Mail::to(env('MAIL_ADMIN'))->queue(new ContactEnquiry($con));
 
-        return redirect(url()->previous() .'#why-choose')->with([
+        return redirect(url()->previous() .'#contact-section-04')->with([
             'status' => "Thank you for getting in touch. Our team will contact you shortly."
         ]);
    }
