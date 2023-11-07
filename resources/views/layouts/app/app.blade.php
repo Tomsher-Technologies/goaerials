@@ -32,6 +32,8 @@
         $bodyClass = 'contact-page-body';
     }elseif(request()->routeIs('social')){
         $bodyClass = 'contact-page-body';
+    }elseif(request()->routeIs('home')){
+        $bodyClass = 'home-page-body';
     }else{
         $bodyClass = '';
     }
