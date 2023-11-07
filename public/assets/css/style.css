@@ -6712,7 +6712,6 @@ font-size: 3.725rem;
         font-size: 3.725rem;
           }
     
-
       .slide-panel-2 h3.stroke-title-two {
 
         -webkit-text-stroke-color: #ffffff21;
@@ -6909,11 +6908,25 @@ object-fit: cover;
 }
 
 
-
-
-
-
 @media (max-width: 576px){
+
+  /* .navbar-brand{
+    position: static;
+    transform: none;
+  } */
+
+  button.navbar-toggler {
+    position: absolute;
+    right: 0;
+}
+
+.navbar-brand {
+  left: 0;
+}
+
+  header.main-header {
+    padding: 15px;
+}
 
   .panel {
     padding: 15px;
@@ -7285,7 +7298,7 @@ opacity: 0;
 }
 
 section.contact-form-sec{
-  background-color: #000;
+  background-color:#000;
 }
 
 

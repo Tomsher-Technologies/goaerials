@@ -1,7 +1,7 @@
 <header class="main-header">
          <div class="container-fluid">
             <div class="row align-items-center">
-               <div class="col-md-1">
+               <div class="col-6 col-md-1 d-none d-md-block">
                   <div class="social-links-top">
                   @php  
                      $general = getSettings();
@@ -33,7 +33,7 @@
                      </ul>
                   </div>
                </div>
-               <div class="col-md-10">
+               <div class="col-6 col-md-10 order-3 order-md-2">
                   <nav class="navbar navbar-expand-xl navbar-dark">
                      <a href="{{ route('home') }}" class="navbar-brand">
                         <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264.29 110.11">
@@ -91,7 +91,7 @@
                      </div>
                   </nav>
                </div>
-               <div class="col-md-1">
+               <div class="col-6 col-md-1 order-1 order-md-3">
                   <div class="dropdown">
                      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                      @if (getActiveLanguage() == 'en')
