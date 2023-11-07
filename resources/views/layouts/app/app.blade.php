@@ -18,6 +18,11 @@
     <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <title>Go Aerials</title>
     @stack('header')
+    <style>
+    #contact h4 {
+        font-size: 1.2rem;
+    }
+    </style>
 </head>
 
 @php 

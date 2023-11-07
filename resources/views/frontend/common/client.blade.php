@@ -3,7 +3,7 @@
         $clients = getClients();
     @endphp
 
-<section id="partners" class="section pp-scrollable position-absolute" style="background-image:url({{ asset($pageData->image1) }});">
+<section id="partners" class="section pp-scrollable position-absolute" >
         <div class="intro">
             <div class="scroll-wrap">
                 <div class="container">
@@ -24,3 +24,11 @@
             </div>
         </div>
     </section>
+    @push('header')
+    <style>
+    #partners{
+        background-image:url('{{ asset($pageData->image1) }}') !important;
+    }
+    
+    </style>
+    @endpush
