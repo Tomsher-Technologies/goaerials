@@ -64,6 +64,7 @@
             margin: 10,
             nav: true,
             dots:false,
+            rtl: true,
             autoplay:true,
             autoplayTimeout:1500,
             responsive: {
