@@ -7271,3 +7271,7 @@ opacity: 0;
 .contact-section h4 {
   font-size: 1.2rem;
 }
+
+section.contact-form-sec{
+  background-color: #000;
+}
