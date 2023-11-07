@@ -159,7 +159,7 @@
     display: none !important;
 }
 section.contact-form-sec{
-  background-color: #000;
+  background-color:#000 !important;
 }
 textarea.form-control {
     min-height: 75px;
