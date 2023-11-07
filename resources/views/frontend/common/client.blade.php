@@ -3,7 +3,7 @@
         $clients = getClients();
     @endphp
 
-<section id="partners" class="section pp-scrollable position-absolute" >
+    <section id="partners" class="section pp-scrollable position-absolute" >
         <div class="intro">
             <div class="scroll-wrap">
                 <div class="container">
@@ -23,6 +23,9 @@
                 </div>
             </div>
         </div>
+        @if(request()->routeIs('home'))
+            <a class="scroll-down"  href="#reels"><span></span>Scroll</a>
+        @endif
     </section>
     @push('header')
     <style>

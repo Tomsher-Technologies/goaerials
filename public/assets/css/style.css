@@ -292,7 +292,7 @@ color: #000;
 }
 
 
-section#contact-form-sec{
+section.contact-form-sec{
   background-color: #000;
 }
 
@@ -2467,8 +2467,7 @@ h1, .h1 {
       -ms-transition: all 0.5s linear;
        -o-transition: all 0.5s linear;
           transition: all 0.5s linear;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+
   }
   
   a:hover,
@@ -2484,8 +2483,7 @@ h1, .h1 {
       -ms-transition: all 0.5s linear;
        -o-transition: all 0.5s linear;
           transition: all 0.5s linear;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+
   }
   
   p {
@@ -2515,8 +2513,7 @@ h1, .h1 {
       -ms-transition: all 0.5s linear;
        -o-transition: all 0.5s linear;
           transition: all 0.5s linear;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+
   }
   
   strong {
@@ -6883,49 +6880,7 @@ bottom: 0;
 min-width: 100%; 
 min-height: 100%;
 }
-.scroll-down
-{
-position: absolute;
-bottom: 50px;
-left: 50%;
-transform: translate(-50%,-50%);
-}
-.scroll-down span:nth-child(2)
-{
-animation-delay: -0.2s;
-}
-.scroll-down span:nth-child(3)
-{
-animation-delay: -0.4s;
-}
-.scroll-down span
-{
-display: block;
-width: 20px;
-height: 20px;
-border-bottom: 1px solid #fff;
-border-right: 1px solid #fff;
-transform: rotate(45deg);
-margin: -10px;
-animation: animate 2s infinite;
-}
-@keyframes animate
-{
-0%
-{
-opacity: 0;
-transform: rotate(45deg) translate(-20px,-20px);
-}
-50%
-{
-opacity: 1;
-}
-100%
-{
-opacity: 0;
-transform: rotate(45deg) translate(20px,20px);
-}
-}
+
 .home-demo .item {
 background: #ffffff;
 }
@@ -7172,4 +7127,129 @@ body.contact-page-body.pp-viewing-about .nav-link {
   background-size: cover;
   height: 100%;
   width: 100%;
+}
+
+a.scroll-down {
+   position: absolute;
+bottom: 0px;
+left: 50%;
+z-index: 2;
+display: inline-block;
+-webkit-transform: translate(0, -50%);
+transform: translate(0, -50%);
+color: #fff;
+font: normal 400 20px/1 'Josefin Sans', sans-serif;
+letter-spacing: .1em;
+text-decoration: none;
+transition: opacity .3s;
+
+}
+
+
+
+
+a.scroll-down span {
+position: absolute;
+top: -60px;
+left: 50%;
+width: 24px;
+height: 24px;
+margin-left: -12px;
+border-left: 1px solid #fff;
+border-bottom: 1px solid #fff;
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+-webkit-animation: sdb05 1.5s infinite;
+animation: sdb05 1.5s infinite;
+box-sizing: border-box;
+font-size: 13px;
+}
+@-webkit-keyframes sdb05 {
+0% {
+-webkit-transform: rotate(-45deg) translate(0, 0);
+opacity: 0;
+}
+50% {
+opacity: 1;
+}
+100% {
+-webkit-transform: rotate(-45deg) translate(-20px, 20px);
+opacity: 0;
+}
+}
+@keyframes sdb05 {
+0% {
+transform: rotate(-45deg) translate(0, 0);
+opacity: 0;
+}
+50% {
+opacity: 1;
+}
+100% {
+transform: rotate(-45deg) translate(-20px, 20px);
+opacity: 0;
+}
+}
+
+
+.pp-viewing-about a.scroll-down span, .pp-viewing-why-choose a.scroll-down span, .pp-viewing-reels a.scroll-down span{
+  border-color: #000000;
+}
+
+.pp-viewing-about a.scroll-down, .pp-viewing-why-choose a.scroll-down, .pp-viewing-reels a.scroll-down{
+  color: #000;
+}
+
+
+.pp-viewing-services .pp-scrollable .scroll-wrap, .pp-viewing-reels .pp-scrollable .scroll-wrap {
+  bottom: 100px;
+}
+
+.owl-carousel .owl-item img{
+  height: 380px;
+  object-fit: cover;
+}
+
+.contact-section h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700
+}
+
+.contact-section h5 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.contact-section p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.contact-section a {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.contact-section .background span {
+  opacity: 0.2;
+}
+
+.contact-section h4 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-section a {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+.contact-section h4 {
+  font-size: 1.2rem;
 }

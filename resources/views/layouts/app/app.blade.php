@@ -18,11 +18,7 @@
     <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <title>Go Aerials</title>
     @stack('header')
-    <style>
-    #contact h4 {
-        font-size: 1.2rem;
-    }
-    </style>
+   
 </head>
 
 @php 
@@ -43,21 +39,9 @@
 <body class="{{ $bodyClass }}">
     @include('frontend.parts.header')
 
-    <div id="pagepiling">
-        @yield('content')
-    </div>
+    @yield('content')
     <!-- Scrollbar -->
-    <div class="progress-nav">
-        <ul class="navbar-nav">
-            <li data-menuanchor="home" class="active"></li>
-            <li data-menuanchor="about"></li>
-            <li data-menuanchor="services"></li>
-            <li data-menuanchor="why-choose"></li>
-            <li data-menuanchor="partners"></li>
-            <li data-menuanchor="reels"></li>
-            <li data-menuanchor="contact"></li>
-        </ul>
-    </div>
+    
     <p class="copy-right">© <?php echo date('Y'); ?> Go Aerials.</p>
     <!-- Optional JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
