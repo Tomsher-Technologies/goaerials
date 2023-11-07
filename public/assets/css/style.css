@@ -170,28 +170,24 @@ border-color: #fff;
 
 
         body.pp-viewing-why-choose .cls-1 {
-          fill: #ffffff;
+          fill: #000000;
         }
 
         
         body.pp-viewing-why-choose .social-links-top svg{
-  fill: #ffffff;
+  fill: #000000;
 }
 
 body.pp-viewing-why-choose .social-links-top path{
-  fill: #ffffff;
+  fill: #000000;
 
 }
 
 
 body.pp-viewing-why-choose .dropdown .dropdown-toggle {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #fff;
 }
-
-
-
-
 
 
 .pp-viewing-partners .cls-1 {
@@ -219,8 +215,6 @@ color: #000000;
   color: #fff;
 }
       
-
-
 
 .pp-viewing-reels .cls-1 {
   fill: #000000;
@@ -302,7 +296,6 @@ body.contact-page-body.pp-viewing-about .cls-1{
 }
 
 
-
 body.contact-page-body.pp-viewing-about .social-links-top path{
   fill: #ffffff;
   }
@@ -314,6 +307,19 @@ body.contact-page-body.pp-viewing-about .social-links-top path{
   
   
 
+  body.about-page-body.pp-viewing-about-section-04 .cls-1{
+    fill: #ffffff;
+  }
+
+
+  body.about-page-body.pp-viewing-about-section-04 .social-links-top path{
+    fill: #ffffff;
+  }
+
+
+  body.about-page-body.pp-viewing-about-section-04 .navbar-nav .nav-link{
+    color: #fff;
+  }
 
 
 
@@ -6770,6 +6776,13 @@ background-color: #f2f2f2;
 padding: 30px;
  }
 
+ .vision-mission ul li{
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #000;
+ }
+
 .vision-mission p{
   font-size: 14px;
   line-height: 22px;
@@ -7272,5 +7285,10 @@ opacity: 0;
 }
 
 section.contact-form-sec{
-  background-color: #000;
+  background-color: #000;
+}
+
+
+.home-page-body.pp-viewing-why-choose .navbar-nav .nav-link{
+color: #000000;
 }

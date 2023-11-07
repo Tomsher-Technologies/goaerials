@@ -61,12 +61,18 @@
         });
     </script>
     <script>
+        let status = false;
+        var activeLang = '{{ getActiveLanguage() }}';
+        if(activeLang != 'en'){
+            status = true;
+        }
+       
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
             nav: true,
             dots:false,
-            rtl: true,
+            rtl: status,
             autoplay:true,
             autoplayTimeout:1500,
             responsive: {
@@ -80,7 +86,7 @@
                     items: 4
                 }
             }
-        })
+        });
 
         $('.lang-change').on('click', function(e) {
                 e.preventDefault();
