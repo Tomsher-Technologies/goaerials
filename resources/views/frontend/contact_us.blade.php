@@ -158,7 +158,9 @@
 .hide {
     display: none !important;
 }
-
+section.contact-form-sec{
+  background-color: #000;
+}
 textarea.form-control {
     min-height: 75px;
 }
