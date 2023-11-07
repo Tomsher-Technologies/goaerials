@@ -169,24 +169,24 @@ border-color: #fff;
 
 
 
-        .pp-viewing-why-choose .cls-1 {
-          fill: #000000;
+        body.pp-viewing-why-choose .cls-1 {
+          fill: #ffffff;
         }
 
         
-        .pp-viewing-why-choose .social-links-top svg{
-  fill: #000000;
+        body.pp-viewing-why-choose .social-links-top svg{
+  fill: #ffffff;
 }
 
-.pp-viewing-why-choose .social-links-top path{
-  fill: #000000;
+body.pp-viewing-why-choose .social-links-top path{
+  fill: #ffffff;
 
 }
 
 
-.pp-viewing-why-choose .dropdown .dropdown-toggle {
-  background-color: #000;
-  color: #fff;
+body.pp-viewing-why-choose .dropdown .dropdown-toggle {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 
@@ -251,8 +251,8 @@ color: #ffffff;
 p.copy-right {
   position: absolute;
   bottom: 5px;
-  left: 50%;
-  transform: translate(-50%, -0)!important;
+  right:60px;
+  /* transform: translate(-50%, -0)!important; */
   color: #fff;
   z-index: 999999;
   font-size: 10px;
@@ -292,7 +292,7 @@ color: #000;
 }
 
 
-section.contact-form-sec{
+section#contact-form-sec{
   background-color: #000;
 }
 
@@ -601,7 +601,6 @@ label.error{
 
 
 .btn{
-  font-family: 'Karla', sans-serif;
   position: relative;
   display: inline-block;
   border:0.2em solid #ea581b;
@@ -961,7 +960,6 @@ header.main-header{
 .navbar-desctop .phone,
 .navbar-desctop .email{
   float: left;
-  font-family: 'Karla', sans-serif;
   position: relative;
   top:0.3rem;
   margin-right: 4rem;
@@ -983,7 +981,6 @@ header.main-header{
 }
 
 .navbar-bottom{
-  font-family: 'Karla', sans-serif;
   color: #000;
 }
 
@@ -1036,7 +1033,6 @@ header.main-header{
 }
 
 .navbar-nav-desctop{
-  font-family: 'Montserrat', sans-serif;
   font-size:0.8rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -1462,7 +1458,6 @@ h1 + .line{
   display: inline-block;
   font-size: 10rem;
   line-height: 1;
-  font-family: 'Karla', sans-serif;
   color:#D4F21B;
   font-weight: 700;
 }
@@ -1536,7 +1531,6 @@ h1 + .line{
 }
 
 .owl-nav{
-  font-family: 'Tahoma';
   position: absolute;
   right: 0;
   top: 0;
@@ -2894,7 +2888,6 @@ h1, .h1 {
   }
   
   nav.navigation-menu a {
-  font-family: 'Montserrat', sans-serif;
   font-size: 45px;
   font-weight: 900;
   font-style: normal;
@@ -2991,7 +2984,6 @@ h1, .h1 {
   
   .post-heading,
   .post-heading-all {
-  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -3053,7 +3045,6 @@ h1, .h1 {
   }
   
   h2.section-subheading {
-  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -3195,7 +3186,6 @@ h1, .h1 {
   .button-the-wrapper a:visited,
   .button-the-wrapper a:active,
   .button-the-wrapper a:focus {
-  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 1;
   font-style: normal;
@@ -4059,7 +4049,6 @@ h1, .h1 {
   padding: 5px 5px;
   background: none;
   margin: 10px 0 10px 0;
-  font-family: 'Raleway', sans-serif;
   font-size: 13px;
   letter-spacing: 0.05em;
   line-height: 1.5;
@@ -6834,7 +6823,7 @@ background-color: #f2f2f2;
 
  .address-block {
   padding: 40px;
-  background-color: #ffffff57;
+  background-color: #00000085;
 }
 
 .footer-links ul{
@@ -7077,8 +7066,8 @@ h5.reel-title {
   color: #000;
 }
 
-.pp-viewing-why-choose .navbar-nav .nav-link{
-  color: #000;
+body.about-page-body.pp-viewing-why-choose .navbar-nav .nav-link{
+  color: #ffffff;
 }
 
 .pp-viewing-reels .navbar-nav .nav-link{
@@ -7208,6 +7197,35 @@ opacity: 0;
 .owl-carousel .owl-item img{
   height: 380px;
   object-fit: cover;
+}
+
+.navbar-nav li .nav-link.active{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+}
+
+
+.vision-mission-conten ul li{
+  font-size: 14px;
+    line-height: 22px;
+    color: #111;
+    font-weight: 500;
+}
+
+#contact{
+  position: relative;
+}
+
+#contact::after{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: #0000008c;
+ z-index: -1;
 }
 
 .contact-section h4 {
