@@ -2,7 +2,7 @@
         $pageData = getPageData('reels');
         $reels = getReels();
     @endphp
-<section id="reels" class="section pp-scrollable position-absolute" style="background-image:url({{ asset($pageData->image1) }});">
+<section id="reels" class="section pp-scrollable position-absolute" >
         <div class="intro">
             <div class="scroll-wrap">
                 <div class="container">
@@ -24,3 +24,11 @@
             </div>
         </div>
     </section>
+    @push('header')
+    <style>
+        #reels{
+            background-image:url('{{ asset($pageData->image1) }}') !important;
+        }
+    
+    </style>
+    @endpush
