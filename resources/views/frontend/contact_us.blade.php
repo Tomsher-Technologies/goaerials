@@ -16,8 +16,8 @@
                 <div class="scroll-wrap">
                     <div class="container">
                         <div class="row">
-                            <h2 class="text-white mb-3">{{ $pageData->getTranslation('title') ?? '' }}</h2>
-                            <div class="col-md-12">
+                            <h2 class="text-white mb-3 text-center">{{ $pageData->getTranslation('title') ?? '' }}</h2>
+                            <div class="col-md-8 m-auto">
                                 <div class="address-block h-100">
                                     @foreach($address12 as $onetwo)
                                         <h4>{{ $onetwo->getTranslation('place_name') }}</h4>
@@ -53,7 +53,7 @@
                             <div class="row">
 
 
-                                <div class="col-md-12">
+                                <div class="col-md-8 m-auto">
                                     <div class="address-block">
                                         <h4>{{ $threefour->getTranslation('place_name') }}</h4>
                                         <h5>{{ $threefour->getTranslation('company_name') }}</h5>
