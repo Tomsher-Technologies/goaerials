@@ -165,6 +165,13 @@ textarea.form-control {
     min-height: 75px;
 }
 
+.contact-section a {
+  color: #fff !important;;
+  font-size: 14px !important;;
+  display: block !important;;
+  margin-bottom: 3px !important;;
+}
+
 textarea.form-control {
     resize: auto;
 }
