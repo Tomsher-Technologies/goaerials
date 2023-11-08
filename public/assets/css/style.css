@@ -7211,15 +7211,6 @@ color: #000000;
     bottom: 30px;
   }
 
-  /* .navbar-brand{
-    position: static;
-    transform: none;
-  } */
-
-  header.main-header {
-    top: 15px;
-}
-
   a.scroll-down, .copy-right {
     display: none!important;
 }
@@ -7359,6 +7350,10 @@ svg#Layer_2 {
 
 section#why-choose {
   padding-top: 150px;
+}
+
+header.main-header {
+  background-color: #858585;
 }
 
 }
