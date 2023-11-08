@@ -6931,11 +6931,6 @@ object-fit: cover;
 }
 
 
-
-
-
-
-
 #partners .scroll-wrap{
 
   vertical-align: text-top;
@@ -7045,8 +7040,6 @@ transition: opacity .3s;
 }
 
 
-
-
 a.scroll-down span {
 position: absolute;
 top: -60px;
@@ -7089,7 +7082,6 @@ transform: rotate(-45deg) translate(-20px, 20px);
 opacity: 0;
 }
 }
-
 
 .pp-viewing-about a.scroll-down span, .pp-viewing-why-choose a.scroll-down span, .pp-viewing-reels a.scroll-down span{
   border-color: #000000;
@@ -7241,9 +7233,11 @@ a.project-box {
   line-height: 40px;
 }
 
-  button.navbar-toggler {
+button.navbar-toggler {
     position: absolute;
     right: 0;
+    padding: 0;
+    border: 0;
 }
 
 .navbar-brand {
@@ -7354,6 +7348,15 @@ section#why-choose {
 
 header.main-header {
   background-color: #858585;
+}
+
+.address-block {
+  padding: 0;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 28px;
 }
 
 }

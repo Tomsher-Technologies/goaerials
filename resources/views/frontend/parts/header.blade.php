@@ -67,7 +67,7 @@
                      <div class="offcanvas offcanvas-end bg-secondary" id="navbarOffcanvas"
                         tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
-                           <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Offcanvas</h5>
+                           
                            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
@@ -79,7 +79,7 @@
 
                               <li><a class="nav-link  {{ request()->routeIs('clients') ? 'active' : '' }}" href="{{ route('clients') }}">{{ __('Clients') }}</a></li>
 
-                              <li class="{{ (getActiveLanguage() == 'en') ? 'ms-auto' : 'me-auto' }}"><a class="nav-link {{ request()->routeIs('reels') ? 'active' : '' }}" href="{{ route('reels') }}">{{ __('Reels') }}</a></li>
+                              <li class="{{ (getActiveLanguage() == 'en') ? 'ms-sm-0 ms-md-auto' : 'me-sm-0 ms-md-auto' }}"><a class="nav-link {{ request()->routeIs('reels') ? 'active' : '' }}" href="{{ route('reels') }}">{{ __('Reels') }}</a></li>
 
                               <li><a class="nav-link  {{ request()->routeIs('social') ? 'active' : '' }}" href="{{ route('social') }}">{{ __('Social') }}</a></li>
 
