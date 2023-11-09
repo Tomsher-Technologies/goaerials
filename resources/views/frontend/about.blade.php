@@ -22,7 +22,7 @@
             <a class="scroll-down"  href="#about-section-02"><span></span>Scroll</a>
         </section>
 
-        <section id="about-section-02" class="about-page-sec-1 navbar-is-white text-white section pp-scrollable position-absolute">
+        <section id="about-section-02" class="about-page-sec-1  text-white section pp-scrollable position-absolute">
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="container">
@@ -45,7 +45,7 @@
             <a class="scroll-down"  href="#about-section-03"><span></span>Scroll</a>
         </section>
 
-        <section id="about-section-03" class="navbar-is-white text-white section pp-scrollable position-absolute panel slide-panel-1">
+        <section id="about-section-03" class=" text-white section pp-scrollable position-absolute panel slide-panel-1">
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="">

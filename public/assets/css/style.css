@@ -7213,6 +7213,17 @@ color: #000000;
   left: 0;
 }
 
+[dir="rtl"] .progress-nav {
+  left: 3rem;
+  right: auto;
+  transform: translate(0,-50%);
+}
+
+[dir="rtl"] .progress-nav .navbar-nav{
+  padding-right: 0;
+  padding-left: 40px;
+}
+
 @media (max-width: 576px){
 
   .mob-position{
