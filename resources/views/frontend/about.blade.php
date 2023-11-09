@@ -2,7 +2,7 @@
 @section('content')
     <div id="pagepiling-about">
         <section id="about-section-01" class="about-page section pp-scrollable position-absolute">
-            <video autoplay muted loop id="myVideo">
+            <video autoplay muted loop playsinline id="myVideo">
                 <source src="{{$page->video_link}}" type="video/mp4">
             </video>
             <div class="intro">

@@ -5,7 +5,7 @@
         <section id="home" class="navbar-is-white text-white pp-scrollable d-flex align-items-center section position-absolute" role="main">
         
             
-            <video autoplay muted loop id="myVideo">
+            <video autoplay muted loop playsinline id="myVideo">
                 <source src="{{ $page->video_link }}" type="video/mp4">
             </video>
             <div class="intro">

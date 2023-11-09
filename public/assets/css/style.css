@@ -7193,6 +7193,26 @@ color: #000000;
  padding-bottom: 20px;
 }
 
+
+
+
+/* AR */
+
+
+[dir="rtl"] #home .scroll-wrap {
+  padding-right: 80px;
+  padding-left: 0;
+}
+
+[dir="rtl"] .home-demo .owl-nav {
+  position: absolute;
+  left: -15px;
+}
+
+[dir="rtl"] .owl-next{
+  left: 0;
+}
+
 @media (max-width: 576px){
 
   .mob-position{
@@ -7359,4 +7379,10 @@ header.main-header {
   font-size: 28px;
 }
 
+#pagepiling-about .pp-scrollable .scroll-wrap {
+  bottom: 150px;
 }
+
+}
+
+

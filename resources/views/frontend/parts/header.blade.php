@@ -79,7 +79,7 @@
 
                               <li><a class="nav-link  {{ request()->routeIs('clients') ? 'active' : '' }}" href="{{ route('clients') }}">{{ __('Clients') }}</a></li>
 
-                              <li class="{{ (getActiveLanguage() == 'en') ? 'ms-sm-0 ms-md-auto' : 'me-sm-0 ms-md-auto' }}"><a class="nav-link {{ request()->routeIs('reels') ? 'active' : '' }}" href="{{ route('reels') }}">{{ __('Reels') }}</a></li>
+                              <li class="{{ (getActiveLanguage() == 'en') ? 'ms-sm-0 ms-md-auto' : 'me-sm-0 me-md-auto' }}"><a class="nav-link {{ request()->routeIs('reels') ? 'active' : '' }}" href="{{ route('reels') }}">{{ __('Reels') }}</a></li>
 
                               <li><a class="nav-link  {{ request()->routeIs('social') ? 'active' : '' }}" href="{{ route('social') }}">{{ __('Social') }}</a></li>
 
