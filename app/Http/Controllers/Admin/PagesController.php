@@ -228,12 +228,10 @@ class PagesController extends Controller
         $request->validate([
                         'first_title' => 'required',
                         'ar_first_title' => 'required',
+                        'sub_title' => 'required',
+                        'ar_sub_title' => 'required',
                         'first_description' => 'required',
                         'ar_first_description' => 'required',
-                        'second_title' => 'required',
-                        'ar_second_title' => 'required',
-                        'second_description' => 'required',
-                        'ar_second_description' => 'required',
                         'choose_title' => 'required',
                         'ar_choose_title' => 'required',
                         'choose_description' => 'required',
@@ -255,6 +253,9 @@ class PagesController extends Controller
                         'mission_content' => 'required',
                         'ar_mission_content' => 'required',
                         'first_image' => 'nullable|max:1024',
+                        'second_image' => 'nullable|max:1024',
+                        'third_image' => 'nullable|max:1024',
+                        'fourth_image' => 'nullable|max:1024',
                         'vision_image' => 'nullable|max:1024',
                         'mission_image' => 'nullable|max:1024',
                         'video_link' => 'nullable'
@@ -267,12 +268,11 @@ class PagesController extends Controller
                 'page_name'             => 'about',
                 'title'                 => $request->first_title,
                 'ar_title'              => $request->ar_first_title,
+                'sub_title'             => $request->sub_title,
+                'ar_sub_title'          => $request->ar_sub_title,
                 'description'           => $request->first_description,
                 'ar_description'        => $request->ar_first_description,
-                'heading1'              => $request->second_title,
-                'ar_heading1'           => $request->ar_second_title,
-                'content1'              => $request->second_description,
-                'ar_content1'           => $request->ar_second_description,
+                
                 'heading2'              => $request->choose_title,
                 'ar_heading2'           => $request->ar_choose_title,
                 'content2'              => $request->choose_description,
@@ -319,6 +319,22 @@ class PagesController extends Controller
             $image = uploadImage($request, 'mission_image', 'pages/about');
             deleteImage($pageData->image3);
             $data['image3'] = $image;
+        }
+
+        if ($request->hasFile('second_image')) {
+            $image = uploadImage($request, 'second_image', 'pages/about');
+            deleteImage($pageData->image4);
+            $data['image4'] = $image;
+        }
+        if ($request->hasFile('third_image')) {
+            $image = uploadImage($request, 'third_image', 'pages/about');
+            deleteImage($pageData->image5);
+            $data['image5'] = $image;
+        }
+        if ($request->hasFile('fourth_image')) {
+            $image = uploadImage($request, 'fourth_image', 'pages/about');
+            deleteImage($pageData->image6);
+            $data['image6'] = $image;
         }
 
         if ($request->hasFile('video_link')) {

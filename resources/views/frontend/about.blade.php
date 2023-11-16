@@ -13,6 +13,7 @@
                                 <h2>
                                 {!! $page->getTranslation('title') ?? '' !!}
                                 </h2>
+                                <p> {!! $page->getTranslation('title') ?? '' !!}</p>
                                 {!! $page->getTranslation('description') ?? '' !!}
                             </div>
                         </div>
@@ -25,38 +26,27 @@
             </a>
         </section>
 
-        <section id="about-section-02" class="about-page-sec-1  text-white section pp-scrollable position-absolute">
-            <div class="intro">
-                <div class="scroll-wrap">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>
-                                {!! $page->getTranslation('heading1') ?? '' !!}
-                                </h5>
-                            </div>
-                            <div class="col-md-6">
-                                {!! $page->getTranslation('content1') ?? '' !!}
-                            </div>
-                        </div>
-                        <div class="row g-5">
-                            <img src="{{ asset($page->getImage1()) }}" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-           <a href="#about-section-03" id="scroll-down">
-                <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
-            </a>
-        </section>
-
-        <section id="about-section-03" class=" text-white section pp-scrollable position-absolute panel slide-panel-1">
+        <section id="about-section-02" class=" text-white section pp-scrollable position-absolute panel slide-panel-1">
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="">
                         {!! $page->getTranslation('heading2') ?? '' !!}
                         {!! $page->getTranslation('content2') ?? '' !!}
+                    </div>
+                </div>
+            </div>
+            <a href="#about-section-03" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
+        </section>
+
+        <section id="about-section-03" class="navbar-is-white text-white section pp-scrollable position-absolute panel slide-panel-2">
+            <div class="intro">
+                <div class="scroll-wrap">
+                    <div class="">
+                        {!! $page->getTranslation('heading3') ?? '' !!}
+                        {!! $page->getTranslation('content3') ?? '' !!}
                     </div>
                 </div>
             </div>
@@ -66,22 +56,7 @@
             </a>
         </section>
 
-        <section id="about-section-04" class="navbar-is-white text-white section pp-scrollable position-absolute panel slide-panel-2">
-            <div class="intro">
-                <div class="scroll-wrap">
-                    <div class="">
-                        {!! $page->getTranslation('heading3') ?? '' !!}
-                        {!! $page->getTranslation('content3') ?? '' !!}
-                    </div>
-                </div>
-            </div>
-            <a href="#about-section-05" id="scroll-down">
-                <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
-            </a>
-        </section>
-
-        <section id="about-section-05" class="section pp-scrollable position-absolute panel slide-panel-3">
+        <section id="about-section-04" class="section pp-scrollable position-absolute panel slide-panel-3">
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="">
@@ -91,13 +66,13 @@
                 </div>
             </div>
             
-            <a href="#about-section-06" id="scroll-down">
+            <a href="#about-section-05" id="scroll-down">
                 <span class="arrow-down"></span>
                 <span class="scroll-text">Scroll</span>
             </a>
         </section>
 
-        <section id="about-section-06" class="vision-mission section panel pp-scrollable position-absolute">
+        <section id="about-section-05" class="vision-mission section panel pp-scrollable position-absolute">
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="row g-3 align-items-center">
@@ -131,7 +106,23 @@
             <li data-menuanchor="about-section-03"></li>
             <li data-menuanchor="about-section-04"></li>
             <li data-menuanchor="about-section-05"></li>
-            <li data-menuanchor="about-section-06"></li>
         </ul>
     </div>
 @endsection
+
+@push('header')
+<style>
+    #about-section-02{
+        background-image:url('{{ asset($page->getImage1()) }}') !important;
+    }
+    #about-section-03{
+        background-image:url('{{ asset($page->getImage4()) }}') !important;
+    }
+    #about-section-04{
+        background-image:url('{{ asset($page->getImage5()) }}') !important;
+    }
+    #about-section-05{
+        background-image:url('{{ asset($page->getImage6()) }}') !important;
+    }
+</style>
+@endpush
