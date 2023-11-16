@@ -44,7 +44,7 @@
     @yield('content')
     <!-- Scrollbar -->
     
-    <p class="copy-right">© <?php echo date('Y'); ?> Go Aerials.</p>
+    <p class="copy-right">© <?php echo date('Y'); ?> {{ __('Go Aerials. All rights reserved.') }}</p>
     <!-- Optional JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

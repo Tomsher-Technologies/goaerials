@@ -25,7 +25,7 @@
         </section>
         <!-- About -->
         <section id="about" class="section pp-scrollable d-flex align-items-center position-absolute">
-            <h3 class="stroke-title">{{ $page->getTranslation('heading1') ?? '' }}</h3>
+            
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="container">
@@ -36,11 +36,11 @@
                                 </h2>
                                 {!! $page->getTranslation('description') ?? '' !!}
                             </div>
-                            <div class="mt-5 mt-md-0 col-md-6 col-lg-5  offset-lg-1">
+                            <!-- <div class="mt-5 mt-md-0 col-md-6 col-lg-5  offset-lg-1">
                                 <div class="position-relative">
-                                    <img alt="" class="border-radius w-100" src="{{ asset($page->getImage1('image1')) }}">
+                                    <img alt="" class="border-radius w-100" src="">
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -49,28 +49,7 @@
         </section>
         <!-- Services -->
         @include('frontend.common.service')
-        <!-- Why Choose -->
-        <section id="why-choose" class="section pp-scrollable d-flex align-items-center position-absolute">
-            <div class="intro">
-                <div class="scroll-wrap">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-5">
-                                <div class="position-relative">
-                                    
-                                    <img alt="" class="border-radius w-100" src="{{ asset($page->getImage2()) }}">
-                                </div>
-                            </div>
-                            <div class="mt-5 mt-lg-0 col-lg-5 offset-lg-1">
-                                <h2>{!! $page->getTranslation('heading2') ?? '' !!}</span></h2>
-                                {!! $page->getTranslation('content2' ?? '') !!}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="scroll-down"  href="#partners"><span></span>Scroll</a>
-        </section>
+       
         <!-- Partners -->
         @include('frontend.common.client')
         <!-- Reels-->
@@ -83,10 +62,17 @@
             <li data-menuanchor="home" class="active"></li>
             <li data-menuanchor="about"></li>
             <li data-menuanchor="services"></li>
-            <li data-menuanchor="why-choose"></li>
             <li data-menuanchor="partners"></li>
             <li data-menuanchor="reels"></li>
             <li data-menuanchor="contact"></li>
         </ul>
     </div>
 @endsection
+
+    @push('header')
+    <style>
+        #about{
+            background-image:url('{{ asset($page->getImage1()) }}') !important;
+        }
+    </style>
+    @endpush

@@ -1,28 +1,31 @@
-<section id="contact" class="navbar-is-white text-white section pp-scrollable position-absolute"
-        style="background-image:url({{ asset('assets/img/bg/contact.jpg') }});">
+    @php 
+        $pageData = getPageData('contact');
+    @endphp
+    
+    <section id="contact" class="navbar-is-white text-white section pp-scrollable position-absolute"
+        style="background-image:url({{ asset($page->getImage2()) }});">
         <div class="intro">
             <div class="scroll-wrap">
                 <div class="container">
                     <div class="row">
-                        @php 
-                            $pageData = getPageData('contact');
-                        @endphp
-                        <h2 class="text-white mb-3">{{ $pageData->getTranslation('title') ?? '' }}</h2>
+                       
+                        <h2 class="text-white mb-3">{{ $page->getTranslation('heading1') ?? '' }}</h2>
                         <div class="col-md-6">
-                            <div class="address-block h-100">
-                                @php 
-                                    $address12 = getFirstTwoAddress();
+                            @php 
+                                $address12 = getFirstTwoAddress();
 
-                                @endphp
-                                @foreach($address12 as $onetwo)
+                            @endphp
+                            @foreach($address12 as $onetwo)
+                            <div class="address-block">
                                     <h4>{{ $onetwo->getTranslation('place_name') }}</h4>
                                     <h5>{{ $onetwo->getTranslation('company_name') }}</h5>
                                     <p>{{ $onetwo->getTranslation('address') }}
                                     </p>
                                     <a href="mailto:{{ $onetwo->email }}"> {{ $onetwo->email }}</a>
                                     <a href="tel:{{ $onetwo->phone }}"> {{ $onetwo->phone }}</a>
-                                @endforeach
-                            </div>
+                                </div>
+                            @endforeach
+                           
                         </div>
                         <div class="col-md-6">
                                 @php 

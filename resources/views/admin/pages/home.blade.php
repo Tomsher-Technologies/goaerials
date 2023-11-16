@@ -74,18 +74,6 @@
                                 <x-input-error name='ar_about_description' />
                             </div>
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Background Text</label>
-                                <input type="text" name="background_text" class="form-control"
-                                    value="{{ old('background_text', $data->getTranslation('heading1','en')) }}" >
-                                <x-input-error name='background_text' />
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Arabic Background Text</label>
-                                <input type="text" name="ar_background_text" dir="rtl" class="form-control"
-                                    value="{{  old('ar_background_text', $data->getTranslation('heading1', 'ar')) }}" >
-                                <x-input-error name='ar_background_text' />
-                            </div>
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 450x400 pixels)</span></label>
@@ -106,7 +94,7 @@
                             </div>
 
                             <div class="form-group">
-                                <h4>Why Choose Us Section</h4>
+                                <h4>Connect With Us Section</h4>
                             </div>
 
                             <div class="form-group">
@@ -122,17 +110,6 @@
                                 <x-input-error name='ar_choose_title' />
                             </div>
                             
-                            <div class="form-group position-relative error-l-50">
-                                <label>Description</label>
-                                <textarea class="form-control" id="engContent" name="choose_content" rows="2">{{ old('choose_content', $data->getTranslation('content2','en')) }}</textarea>
-                                <x-input-error name='choose_content' />
-                            </div>
-                            <div class="form-group position-relative error-l-50">
-                                <label>Arabic Description</label>
-                                <textarea class="form-control" id="arContent" dir="rtl" name="ar_choose_content" rows="2">{{ old('ar_choose_content', $data->getTranslation('content2', 'ar')) }}</textarea>
-                                <x-input-error name='ar_choose_content' />
-                            </div>
-
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 450x400 pixels)</span></label>
                                 <div class="input-group mb-3">

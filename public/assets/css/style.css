@@ -19,227 +19,9 @@ svg#Layer_2 {
 }
 
 
-.pp-viewing-about .cls-1, .pp-viewing-experience .cls-1, .pp-viewing-partners .cls-1, .pp-viewing-skills .cls-1{
- fill: #000;
-}
-
-.pp-viewing-about .social-links-top svg, .pp-viewing-skills .social-links-top svg, .pp-viewing-experience .social-links-top svg, .pp-viewing-partners .social-links-top svg{
-  fill: #000;
-
-}
-
-.pp-viewing-about .social-links-top path, .pp-viewing-skills .social-links-top path, .pp-viewing-experience .social-links-top path, .pp-viewing-partners .social-links-top path{
-  fill: #000;
-
-}
-
-.pp-viewing-about .dropdown .dropdown-toggle, .pp-viewing-skills .dropdown .dropdown-toggle, .pp-viewing-partners .dropdown .dropdown-toggle {
-  background-color: #000;
-  color: #fff;
-}
-
 #partners{
   background-color: #000000;
 }
-
-
-.pp-viewing-projects .toggler .toggler-icon{
-border-color: #fff;
-}
-
-.about-page-body.pp-viewing-about .toggler .toggler-icon{
-  border-color: #fff;
-}
-
-.about-page-body.pp-viewing-about .cls-1{
-  fill: #ffffff;
- }
-
- .about-page-body.pp-viewing-about .social-links-top svg{
-  fill: #ffffff;
-
-}
-
-.about-page-body.pp-viewing-about .social-links-top path{
-  fill: #ffffff;
-
-}
-
-
-.about-page-body.pp-viewing-home .social-links-top svg{
-  fill: #000000;
-}
-
-.about-page-body.pp-viewing-home .social-links-top path{
-  fill: #000000;
-
-}
-
-.about-page-body.pp-viewing-home .cls-1{
-  fill: #000;
- }
-
- .about-page-body.pp-viewing-about .social-links-top svg{
-  fill: #000000;
-}
-
-.about-page-body.pp-viewing-about .social-links-top path{
-  fill: #000000;
-
-}
-
-.about-page-body.pp-viewing-about .cls-1{
-  fill: #000;
- }
-
- .about-page-body.pp-viewing-about .toggler .toggler-icon{
-  border-color: #000000;
-  }
-
-
-
- .about-page-body.pp-viewing-skills .social-links-top svg{
-  fill: #ffffff;
-}
-
-.about-page-body.pp-viewing-skills .social-links-top path{
-  fill: #ffffff;
-
-}
-
-.about-page-body.pp-viewing-skills .cls-1{
-  fill: #ffffff;
- }
- .about-page-body.pp-viewing-skills .toggler .toggler-icon{
-  border-color: #fff;
-  }
-
-
-
-
- .about-page-body.pp-viewing-projects .social-links-top svg{
-  fill: #000000;
-}
-
-.about-page-body.pp-viewing-projects .social-links-top path{
-  fill: #000000;
-
-}
-
-.about-page-body.pp-viewing-projects .cls-1{
-  fill: #000;
- }
-
- 
- .about-page-body.pp-viewing-projects .toggler .toggler-icon{
-  border-color: #000000;
-  }
-
-
-  .about-page-body.pp-viewing-experience .toggler .toggler-icon{
-    border-color: #000000;
-    }
-  
-
-
-
-
-    .contact-page-body.pp-viewing-about .toggler .cls-1n{
-      fill: #ffffff;
-      }
-    
-
-      .clients-page-body.pp-viewing-about .cls-1{
-        fill: #ffffff;
-      }
-
-      .clients-page-body.pp-viewing-about .social-links-top svg{
-        fill: #ffffff;
-      }
-      
-      .clients-page-body.pp-viewing-about .social-links-top path{
-        fill: #ffffff;
-      
-      }
-
-      .clients-page-body.pp-viewing-home .toggler .toggler-icon{
-        border-color: #fff;
-        }
-
-
-
-
-        body.pp-viewing-why-choose .cls-1 {
-          fill: #000000;
-        }
-
-        
-        body.pp-viewing-why-choose .social-links-top svg{
-  fill: #000000;
-}
-
-body.pp-viewing-why-choose .social-links-top path{
-  fill: #000000;
-
-}
-
-
-body.pp-viewing-why-choose .dropdown .dropdown-toggle {
-  background-color: #000000;
-  color: #fff;
-}
-
-
-.pp-viewing-partners .cls-1 {
-  fill: #ffffff;
-}
-
-
-.pp-viewing-partners .social-links-top svg{
-fill: #ffffff;
-}
-
-.pp-viewing-partners .social-links-top path{
-fill: #ffffff;
-
-}
-
-
-.pp-viewing-partners .dropdown .dropdown-toggle {
-background-color: #ffffff;
-color: #000000;
-}
-
-
-.pp-viewing-partners .navbar-nav .nav-link{
-  color: #fff;
-}
-      
-
-.pp-viewing-reels .cls-1 {
-  fill: #000000;
-}
-
-.pp-viewing-reels .social-links-top svg{
-fill: #000000;
-}
-
-.pp-viewing-reels .social-links-top path{
-fill: #000000;
-
-}
-
-
-.pp-viewing-reels .dropdown .dropdown-toggle {
-background-color: #000000;
-color: #ffffff;
-}
-
-
-.pp-viewing-partners .navbar-nav .nav-link{
-  color: #fff;
-}
-      
 
 
 p.copy-right {
@@ -263,89 +45,9 @@ color: #000;
 }
 
 
-
-.about-page-body .social-links-top path, .reel-page-body .social-links-top path{
-fill: #000;
-}
-
-
-
-.about-page-body .cls-1, .reel-page-body .cls-1{
-  fill: #000;
-}
-
-
-.about-page-body .offcanvas-body .navbar-nav .nav-link, .reel-page-body .offcanvas-body .navbar-nav .nav-link{
-color: #000;
-}
-
-
-.reel-page-body .dropdown .dropdown-toggle{
-  background-color: #000;
-  color: #fff;
-}
-
-
 section#contact-form-sec{
   background-color: #000;
 }
-
-
-body.contact-page-body.pp-viewing-about .cls-1{
-  fill: #ffffff;
-}
-
-
-body.contact-page-body.pp-viewing-about .social-links-top path{
-  fill: #ffffff;
-  }
-
-  body.contact-page-body.pp-viewing-about .dropdown .dropdown-toggle{
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  
-
-  body.about-page-body.pp-viewing-about-section-04 .cls-1{
-    fill: #ffffff;
-  }
-
-
-  body.about-page-body.pp-viewing-about-section-04 .social-links-top path{
-    fill: #ffffff;
-  }
-
-
-  body.about-page-body.pp-viewing-about-section-04 .navbar-nav .nav-link{
-    color: #fff;
-  }
-
-
-
-
-
-
-
-
- 
-
-
-
-    
-
-
-
-
-
-
-
-
- 
- 
-
-
-
 
 
 #home .scroll-wrap{
@@ -842,15 +544,6 @@ ion-icon{
 -------------------------------------------------------------------------------*/
 
 
-/* .navbar{
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-  padding: 0 1.5rem;
-  border-bottom: 1px solid rgba(52,52,52,0.1);
-  height:4.7rem;
-} */
-
 .offcanvas-body .navbar-nav{
   width: 100%;
   gap: 40px;
@@ -860,7 +553,6 @@ ion-icon{
   font-size: 18px;
   color: #fff;
 }
-
 
 .pp-viewing-projects .navbar-nav .nav-link, .pp-viewing-testimonials .navbar-nav .nav-link, .pp-viewing-home .navbar-nav .nav-link{
   color: #fff;
@@ -873,21 +565,8 @@ header.main-header{
   z-index: 9999;
   width: 100%;
   padding: 30px 50px;
+  background-color: #000;
 }
-
-
-
-/* .home-page-body header.main-header::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 25vh;
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgb(0 0 0 / 82%) 0%, rgba(255,255,255,0) 100%);
-  z-index: -1;
-} */
 
 
 #home::after{
@@ -901,8 +580,6 @@ header.main-header{
   background: linear-gradient(180deg, rgb(0 0 0 / 82%) 0%, rgba(255,255,255,0) 100%);
   z-index: 0;
 }
-
-
 
 
 @media(min-width: 992px){

@@ -29,7 +29,7 @@
             scrollingSpeed: 280,
             navigation:false,
             menu: '.navbar-nav',
-            anchors: ['home', 'about', 'services', 'why-choose', 'partners', 'reels', 'contact'],
+            anchors: ['home', 'about', 'services', 'partners', 'reels', 'contact'],
             afterRender: function(anchorLink, index){ 
               NavbarColor();
             },

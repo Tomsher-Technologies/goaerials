@@ -153,6 +153,13 @@ function getClients(){
 function getReels(){
     return Reels::where('is_active',1)->where('is_deleted',0)->orderBy('sort_order','asc')->get();
 }
+function getFirstAddress(){
+    return Address::orderBy('id', 'ASC')->limit(1)->get();
+}
+
+function getTwoThreeAddress(){
+    return Address::orderBy('id', 'ASC')->skip(1)->take(2)->get();
+}
 
 function getFirstTwoAddress(){
     return Address::orderBy('id', 'ASC')->limit(2)->get();

@@ -37,6 +37,9 @@ class PagesController extends Controller
 
     public function storeHomePage(Request $request)
     {
+        // echo '<pre>';
+        // print_r($request->all());
+        // die;
         $request->validate([
                         'main_title' => 'required',
                         'ar_main_title' => 'required',
@@ -45,13 +48,9 @@ class PagesController extends Controller
                         'ar_about_title' => 'required',
                         'about_description' => 'required',
                         'ar_about_description' => 'required',
-                        'background_text' => 'required',
-                        'ar_background_text' => 'required',
                         'about_image' => 'nullable|max:1024',
                         'choose_title' => 'required',
                         'ar_choose_title' => 'required',
-                        'choose_content' => 'required',
-                        'ar_choose_content' => 'required',
                         'main_image' => 'nullable|max:1024'
                     ],[
                         '*.required' => 'This field is required.',
@@ -64,14 +63,12 @@ class PagesController extends Controller
                 'title'             => $request->main_title,
                 'sub_title'         => $request->about_title,
                 'description'       => $request->about_description,
-                'heading1'          => $request->background_text,
                 'heading2'          => $request->choose_title,
                 'content2'          => $request->choose_content,
 
                 'ar_title'             => $request->ar_main_title,
                 'ar_sub_title'         => $request->ar_about_title,
                 'ar_description'       => $request->ar_about_description,
-                'ar_heading1'          => $request->ar_background_text,
                 'ar_heading2'          => $request->ar_choose_title,
                 'ar_content2'          => $request->ar_choose_content,
 
@@ -83,6 +80,7 @@ class PagesController extends Controller
                 'twitter_description'  => $request->twitter_description,
                 'seokeywords'          => $request->seokeywords,
         ];
+       
 
         $pageData = Pages::where('page_name','home')->first();
         if ($request->hasFile('about_image')) {
@@ -95,6 +93,8 @@ class PagesController extends Controller
             deleteImage($pageData->image2);
             $data['image2'] = $image;
         }
+
+       
 
         if ($request->hasFile('video_link')) {
             $video_link = uploadImage($request, 'video_link', 'pages/home');
@@ -617,7 +617,12 @@ class PagesController extends Controller
 
     public function storeSocialPage(Request $request)
     {
-        
+        $request->validate([
+            'background_image' => 'nullable|max:1024'
+        ],[
+            'background_image.uploaded' => "Maximum file size to upload is 1 MB."
+        ]);
+       
         $data = [
                 'page_title'            => 'Social',
                 'page_name'             => 'social',
@@ -629,7 +634,14 @@ class PagesController extends Controller
                 'twitter_description'   => $request->twitter_description,
                 'seokeywords'           => $request->seokeywords,
         ];
-       
+         
+        $pageData = Pages::where('page_name','social')->first();
+        if ($request->hasFile('background_image')) {
+            $image = uploadImage($request, 'background_image', 'pages/social');
+            deleteImage($pageData->image1);
+            $data['image1'] = $image;
+        }
+        
         $this->savePageSettings($data);
         return redirect()->back()->with([
             'status' => "Page details updated"
