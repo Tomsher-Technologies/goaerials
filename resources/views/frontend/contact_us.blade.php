@@ -36,7 +36,10 @@
                     </div>
                 </div>
             </div>
-            <a class="scroll-down"  href="#contact-section-02"><span></span>Scroll</a>
+            <a href="#contact-section-02" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
         <!-- Contact -->
         @php 
@@ -67,7 +70,10 @@
                         </div>
                     </div>
                 </div>
-                <a class="scroll-down"  href="#contact-section-0{{$i+1}}"><span></span>Scroll</a>
+                <a href="#contact-section-0{{$i+1}}" id="scroll-down">
+                    <span class="arrow-down"></span>
+                    <span class="scroll-text">Scroll</span>
+                </a>
             </section>
             @php   $i++;  @endphp
         @endforeach

@@ -24,7 +24,10 @@
             </div>
         </div>
         @if(request()->routeIs('home'))
-            <a class="scroll-down"  href="#contact"><span></span>Scroll</a>
+            <a href="#contact" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         @endif
     </section>
     @push('header')

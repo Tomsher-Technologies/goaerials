@@ -19,7 +19,10 @@
                     </div>
                 </div>
             </div>
-            <a class="scroll-down"  href="#about-section-02"><span></span>Scroll</a>
+            <a href="#about-section-02" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
 
         <section id="about-section-02" class="about-page-sec-1  text-white section pp-scrollable position-absolute">
@@ -42,7 +45,10 @@
                     </div>
                 </div>
             </div>
-            <a class="scroll-down"  href="#about-section-03"><span></span>Scroll</a>
+           <a href="#about-section-03" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
 
         <section id="about-section-03" class=" text-white section pp-scrollable position-absolute panel slide-panel-1">
@@ -54,7 +60,10 @@
                     </div>
                 </div>
             </div>
-            <a class="scroll-down"  href="#about-section-04"><span></span>Scroll</a>
+            <a href="#about-section-04" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
 
         <section id="about-section-04" class="navbar-is-white text-white section pp-scrollable position-absolute panel slide-panel-2">
@@ -66,7 +75,10 @@
                     </div>
                 </div>
             </div>
-            <a class="scroll-down"  href="#about-section-05"><span></span>Scroll</a>
+            <a href="#about-section-05" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
 
         <section id="about-section-05" class="section pp-scrollable position-absolute panel slide-panel-3">
@@ -78,7 +90,11 @@
                     </div>
                 </div>
             </div>
-            <a class="scroll-down"  href="#about-section-06"><span></span>Scroll</a>
+            
+            <a href="#about-section-06" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
 
         <section id="about-section-06" class="vision-mission section panel pp-scrollable position-absolute">
