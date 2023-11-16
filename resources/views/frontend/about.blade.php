@@ -13,7 +13,7 @@
                                 <h2>
                                 {!! $page->getTranslation('title') ?? '' !!}
                                 </h2>
-                                <p> {!! $page->getTranslation('title') ?? '' !!}</p>
+                                <p> {!! $page->getTranslation('sub_title') ?? '' !!}</p>
                                 {!! $page->getTranslation('description') ?? '' !!}
                             </div>
                         </div>
