@@ -21,7 +21,10 @@
                     </div>
                 </div>
             </div>
-            <a class="scroll-down"  href="#about"><span></span>Scroll</a>
+            <a href="#about" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
         <!-- About -->
         <section id="about" class="section pp-scrollable d-flex align-items-center position-absolute">
@@ -45,7 +48,11 @@
                     </div>
                 </div>
             </div>
-            <a class="scroll-down"  href="#services"><span></span>Scroll</a>
+            
+            <a href="#services" id="scroll-down">
+                <span class="arrow-down"></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
         <!-- Services -->
         @include('frontend.common.service')
