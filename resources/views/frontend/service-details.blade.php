@@ -7,9 +7,9 @@
                 <div class="container">
                     <div class="service-detail-inner">
                         <div class="row">
-                            <div class="col-md-6">
-                                <img src="{{ asset($service->getImage()) }}" class="img-fluid" alt="">
-                            </div>
+                            <!-- <div class="col-md-6">
+                                <img src="" class="img-fluid" alt="">
+                            </div> -->
                             <div class="col-md-6">
                                 <h4 class="pt-3">{{ $service->getTranslation('title') }}</h4>
                                 {!! $service->getTranslation('content') !!}
@@ -24,3 +24,11 @@
     </section>
 </div>
 @endsection
+
+@push('header')
+    <style>
+        #services{
+            background-image:url('{{ asset($service->getImage()) }}') !important;
+        }
+    </style>
+    @endpush

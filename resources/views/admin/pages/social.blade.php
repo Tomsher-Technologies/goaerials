@@ -21,6 +21,24 @@
                             enctype="multipart/form-data">
                             @csrf
 
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Background Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 450x400 pixels)</span></label>
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input name="background_image" class="img" type="file" class="custom-file-input"
+                                            id="image1" accept="image/*">
+                                        <label class="custom-file-label" for="image1">Choose
+                                            file</label>
+                                    </div>
+                                </div>
+                                <x-input-error name='background_image' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Current Image</label>
+                                <img class="img-custom form-control" src="{{ $data->getImage1('image1') }}" alt="">
+                            </div>
+
                             @include('admin.common.seo_form')
 
                             <button type="submit" class="btn btn-primary mb-0">Update</button>

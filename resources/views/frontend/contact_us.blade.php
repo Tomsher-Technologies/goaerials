@@ -6,7 +6,7 @@
     <div id="pagepiling-contact">
         @php 
             $pageData = getPageData('contact');
-            $address12 = getFirstTwoAddress();
+            $address12 = getFirstAddress();
         @endphp
 
         <section id="contact-section-01" class="navbar-is-white text-white section pp-scrollable position-absolute contact-background contact-section"
@@ -40,12 +40,12 @@
         </section>
         <!-- Contact -->
         @php 
-            $address34 = getThreeFourAddress();
+            $address23 = getTwoThreeAddress();
             $i = 2;
         @endphp
-        @foreach($address34 as $threefour)
+        @foreach($address23 as $twothree)
             <section id="contact-section-0{{$i}}" class="navbar-is-white text-white section pp-scrollable position-absolute contact-background contact-section"
-                style="background-image:url({{ asset($threefour->getImage()) }});">
+                style="background-image:url({{ asset($twothree->getImage()) }});">
 
                 <div class="intro">
                     <div class="scroll-wrap">
@@ -55,11 +55,11 @@
 
                                 <div class="col-md-8 m-auto">
                                     <div class="address-block">
-                                        <h4>{{ $threefour->getTranslation('place_name') }}</h4>
-                                        <h5>{{ $threefour->getTranslation('company_name') }}</h5>
-                                        <p>{{ $threefour->getTranslation('address') }}</p>
-                                        <a href="mailto:{{ $threefour->email }}"> {{ $threefour->email }}</a>
-                                        <a href="tel:{{ $threefour->phone }}"> {{ $threefour->phone }}</a>
+                                        <h4>{{ $twothree->getTranslation('place_name') }}</h4>
+                                        <h5>{{ $twothree->getTranslation('company_name') }}</h5>
+                                        <p>{{ $twothree->getTranslation('address') }}</p>
+                                        <a href="mailto:{{ $twothree->email }}"> {{ $twothree->email }}</a>
+                                        <a href="tel:{{ $twothree->phone }}"> {{ $twothree->phone }}</a>
                                     </div>
 
                                 </div>
