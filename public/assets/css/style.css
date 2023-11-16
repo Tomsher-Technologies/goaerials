@@ -4,6 +4,12 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+@font-face {
+  font-family: 'Days Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('../fonts/Days.woff'), url('../fonts/Days.woff') format('woff');
+  }
 
 /* .section-bg{
 
@@ -72,7 +78,8 @@ html{
 }
 
 body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Days Regular'!important;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.625em;
   color:#767676;
@@ -114,7 +121,7 @@ h1,
 .h1{ 
   position: relative;
   font-size: 5.725rem;
-  font-weight: 700;
+  font-weight: normal;
   line-height: 1;
   color: #000;
 }
@@ -122,7 +129,7 @@ h1,
 h2,
 .h2{ 
   position: relative;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 2.7rem;
   line-height: 1.2;
   color: #000;
@@ -303,10 +310,7 @@ label.error{
 }
 
 
-
 /* 1.4 Buttons */
-
-
 
 .btn{
   position: relative;
@@ -2729,7 +2733,7 @@ h1, .h1 {
   h2.section-subheading {
   font-size: 15px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   padding: 0;
   text-align: center;
@@ -2914,7 +2918,6 @@ h1, .h1 {
   .button-the-wrapper.button-the-wrapper-submit a:visited,
   .button-the-wrapper.button-the-wrapper-submit a:active,
   .button-the-wrapper.button-the-wrapper-submit a:focus {
-  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 1;
   font-style: normal;
@@ -2937,9 +2940,8 @@ h1, .h1 {
   }
   
   h1.section-header {
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 30px;
   text-align: left;
   text-transform: none;
@@ -3010,10 +3012,9 @@ h1, .h1 {
   /* 10. section heading h2 */
   h2.section-heading {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   padding: 0;
   text-align: left;
@@ -3105,7 +3106,6 @@ h1, .h1 {
   .animated-text .animated-text-content {
   display: block;
   white-space: nowrap;
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 65px;
@@ -3250,7 +3250,6 @@ h1, .h1 {
   }
   
   .post-box-title {
-  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -3336,9 +3335,8 @@ h1, .h1 {
   
   /* 19. main title */
   h1.main-title {
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 75px;
   text-align: center!important;
   text-transform: uppercase;
@@ -3385,7 +3383,6 @@ h1, .h1 {
   position: fixed;
   display: block;
   visibility: visible;
-  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -3444,7 +3441,6 @@ h1, .h1 {
   
   .panel-title {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -3761,7 +3757,6 @@ h1, .h1 {
   padding: 5px 5px;
   background: none;
   margin: 5px;
-  font-family: 'Raleway', sans-serif;
   font-size: 13px;
   letter-spacing: 0.05em;
   line-height: 1.5;
@@ -3810,7 +3805,6 @@ h1, .h1 {
   }
   
   .success {
-  font-family: 'Raleway', sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 700;
@@ -3889,7 +3883,6 @@ h1, .h1 {
   /* 26. social icons */
   .social-icons {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -3930,7 +3923,6 @@ h1, .h1 {
   .social-icons li a:visited,
   .social-icons li a:active,
   .social-icons li a:focus {
-  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -4022,7 +4014,6 @@ h1, .h1 {
   .social-icons-home li a:visited,
   .social-icons-home li a:active,
   .social-icons-home li a:focus {
-  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -4999,7 +4990,6 @@ h1, .h1 {
   
   .mfp-title,
   .mfp-counter {
-  font-family: 'Raleway', sans-serif;
   font-size: 13px;
   line-height: 1.5;
   font-style: normal;
@@ -5221,7 +5211,6 @@ h1, .h1 {
   }
   
   .date {
-  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 1;
   font-style: normal;
@@ -5234,7 +5223,6 @@ h1, .h1 {
   
   .blog-comments h4 {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   margin: -3px 0 -1px 0;
   }
@@ -5335,7 +5323,6 @@ h1, .h1 {
   /* 36. section subtitle */
   .subtitle {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -5366,7 +5353,6 @@ h1, .h1 {
   .subtitle.subtitle-home a:visited,
   .subtitle.subtitle-home a:active,
   .subtitle.subtitle-home a:focus {
-  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 1;
   font-style: normal;
@@ -5415,9 +5401,8 @@ h1, .h1 {
   
   /* 37. section title */
   h1.main-title {
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   text-align: center!important;
   text-transform: uppercase;
   letter-spacing: -0.04em;
@@ -5617,7 +5602,6 @@ h1, .h1 {
   }
   
   .blog-side-heading h3 {
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -5731,7 +5715,6 @@ h1, .h1 {
   }
   
   .comment-time {
-  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 700;
@@ -6175,7 +6158,6 @@ h1, .h1 {
   content: "\201C";
   position: absolute;
   color: rgba(255, 255, 255, .15);
-  font-family: Georgia, serif;
   font-size: 265px;
   font-style: normal;
   left: -10px;
@@ -6193,7 +6175,6 @@ h1, .h1 {
   }
   
   .testimonial blockquote {
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -6237,128 +6218,6 @@ h1, .h1 {
   color: rgba(0, 0, 0, .15);
   }
   
-  
-  /* 44. HTML5 video */
-  /* video { 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  }
-   */
-  
-  /* 45. Montserrat -webkit-text-stroke Fix */
-  /* Black 900 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 900;
-    src: url('fonts/Montserrat-Black.ttf') format('truetype'),
-         url('fonts/Montserrat-Black.otf') format('opentype');
-  }
-  
-  /* ExtraBold 800 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 800;
-    src: url('fonts/Montserrat-ExtraBold.ttf') format('truetype'),
-         url('fonts/Montserrat-ExtraBold.otf') format('opentype');
-  }
-  
-  /* Bold 700 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('fonts/Montserrat-Bold.ttf') format('truetype'),
-         url('fonts/Montserrat-Bold.otf') format('opentype');
-  }
-  
-  /* SemiBold 600 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    src: url('fonts/Montserrat-SemiBold.ttf') format('truetype'),
-         url('fonts/Montserrat-SemiBold.otf') format('opentype');
-  }
-  
-  /* Medium 500 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    src: url('fonts/Montserrat-Medium.ttf') format('truetype'),
-         url('fonts/Montserrat-Medium.otf') format('opentype');
-  }
-  
-  /* Regular 400 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: url('fonts/Montserrat-Regular.ttf') format('truetype'),
-         url('fonts/Montserrat-Regular.otf') format('opentype');
-  }
-  
-  /* Light 300 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
-    src: url('fonts/Montserrat-Light.ttf') format('truetype'),
-         url('fonts/Montserrat-Light.otf') format('opentype');
-  }
-  
-  /* ExtraLight 200 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 200;
-    src: url('fonts/Montserrat-ExtraLight.ttf') format('truetype'),
-         url('fonts/Montserrat-ExtraLight.otf') format('opentype');
-  }
-  
-  /* Thin 100 */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 100;
-    src: url('fonts/Montserrat-Thin.ttf') format('truetype'),
-         url('fonts/Montserrat-Thin.otf') format('opentype');
-  }
-
-  /* .slide-panel-1, .slide-panel-2{
-    position: relative;
-  }
-
-  .slide-panel-1::after{
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    background-image:url(../img/tab-bg.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-  } */
-
-  /* .slide-panel-2::after{
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    background-image:url(../img/tab-bg2.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-  } */
 
   .slide-panel-3{
 background-color: #f2f2f2;
@@ -6526,9 +6385,6 @@ background-color: #f2f2f2;
 padding-top: 30px;
 }
 
-/* #contact .scroll-wrap{
-  top: 100px;
-} */
 
 #contact .background span {
 
@@ -6537,15 +6393,7 @@ padding-top: 30px;
 }
 
 
-/* .intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-} */
-
 #about .scroll-wrap h2, #skills .scroll-wrap h2{
-  font-size: 25px;
   color: #fff;
 }
 
@@ -6752,11 +6600,6 @@ opacity: 0;
 
 .pp-viewing-about a.scroll-down, .pp-viewing-why-choose a.scroll-down, .pp-viewing-reels a.scroll-down{
   color: #000;
-}
-
-
-.pp-viewing-services .pp-scrollable .scroll-wrap, .pp-viewing-reels .pp-scrollable .scroll-wrap {
-  bottom: 100px;
 }
 
 .owl-carousel .owl-item img{
