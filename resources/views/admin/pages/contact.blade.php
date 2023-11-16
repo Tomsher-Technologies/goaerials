@@ -99,25 +99,25 @@
                                       
                                     </div>
 
-                                    @if($key != 1)
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x1080 pixels)</span></label>
-                                            <div class="input-group mb-3">
-                                                <div class="custom-file">
-                                                    <input  name='address[{{$i}}][image]' class="img" type="file" class="custom-file-input"
-                                                        id="image{{$key}}" accept="image/*">
-                                                    <label class="custom-file-label" for="image{{$key}}">Choose
-                                                        file</label>
-                                                </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x1080 pixels)</span></label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input  name='address[{{$i}}][image]' class="img" type="file" class="custom-file-input"
+                                                    id="image{{$key}}" accept="image/*">
+                                                <label class="custom-file-label" for="image{{$key}}">Choose
+                                                    file</label>
                                             </div>
-                                            <x-input-error name='image' />
                                         </div>
+                                        <x-input-error name='image' />
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Current Image</label>
-                                            <img class="img-custom form-control" src="{{ $add->getImage() }}" alt="">
-                                        </div>
-                                    @endif
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Current Image</label>
+                                        <img class="img-custom form-control" src="{{ $add->getImage() }}" alt="">
+                                    </div>
+                                   
 
                                 @endforeach
                             @endif
@@ -125,6 +125,25 @@
                             <div class="form-group">
                                 <h4>Contact Form Section</h4>
                             </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Background Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x600 pixels)</span></label>
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input name="first_image" class="img" type="file" class="custom-file-input"
+                                            id="imageb" accept="image/*">
+                                        <label class="custom-file-label" for="imageb">Choose
+                                            file</label>
+                                    </div>
+                                </div>
+                                <x-input-error name='first_image' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Current Image</label>
+                                <img class="img-custom form-control" src="{{ $data->getImage1() }}" alt="">
+                            </div>
+
                           
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Form Heading</label>

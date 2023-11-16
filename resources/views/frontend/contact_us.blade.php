@@ -78,7 +78,7 @@
             @php   $i++;  @endphp
         @endforeach
 
-        <section id="contact-section-04" class="section pp-scrollable position-absolute contact-form-sec contact-section">
+        <section id="contact-section-04" style="background-image:url({{ asset($page->getImage1()) }});" class="section pp-scrollable position-absolute contact-form-sec contact-section">
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="container">

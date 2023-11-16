@@ -474,9 +474,11 @@ class PagesController extends Controller
                         'heading' => 'required',
                         'ar_heading' => 'required',
                         'map_heading' => 'required',
-                        'ar_map_heading' => 'required'
+                        'ar_map_heading' => 'required',
+                        'first_image' => 'nullable|max:1024'
                     ],[
-                        '*.required' => 'This field is required.'
+                        '*.required' => 'This field is required.',
+                        '*.uploaded' => "Maximum file size to upload is 1 MB."
                     ]);
         $data = [
                 'page_title'        => 'Contact Us',
@@ -495,7 +497,12 @@ class PagesController extends Controller
                 'twitter_description'  => $request->twitter_description,
                 'seokeywords'          => $request->seokeywords,
         ];
-
+        $pageData = Pages::where('page_name','contact')->first();
+        if ($request->hasFile('first_image')) {
+            $image = uploadImage($request, 'first_image', 'pages/contact');
+            deleteImage($pageData->image1);
+            $data['image1'] = $image;
+        }
       
         $this->savePageSettings($data);
         $addArray = [];
