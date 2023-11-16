@@ -33,7 +33,7 @@
                 <div class="scroll-wrap">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-md-6 pr-md-5 pr-lg-0">
+                            <div class="col-md-12 pr-md-5 pr-lg-0">
                                 <h2>
                                     {!! $page->getTranslation('sub_title') ?? '' !!}
                                 </h2>

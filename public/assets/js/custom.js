@@ -46,7 +46,7 @@
             scrollingSpeed: 280,
             navigation:false,
             menu: '.navbar-nav',
-            anchors: ['about-section-01', 'about-section-02', 'about-section-03', 'about-section-04','about-section-05', 'about-section-06'],
+            anchors: ['about-section-01', 'about-section-02', 'about-section-03', 'about-section-04','about-section-05'],
             afterRender: function(anchorLink, index){ 
             NavbarColor();
             },

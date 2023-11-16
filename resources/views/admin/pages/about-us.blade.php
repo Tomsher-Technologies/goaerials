@@ -38,6 +38,19 @@
                                 <x-input-error name='ar_first_title' />
                             </div>
 
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Sub Title</label>
+                                <input type="text" name="sub_title" class="form-control"
+                                    value="{{ old('sub_title', $data->getTranslation('sub_title','en')) }}" >
+                                <x-input-error name='sub_title' />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Arabic Sub Title</label>
+                                <input type="text" name="ar_sub_title" dir="rtl" class="form-control"
+                                    value="{{ old('ar_sub_title', $data->getTranslation('sub_title', 'ar')) }}" >
+                                <x-input-error name='ar_sub_title' />
+                            </div>
+
                             <div class="form-group position-relative error-l-50">
                                 <label>Description</label>
                                 <textarea class="form-control" id="engDescription" name="first_description" rows="2">{{ old('first_description', $data->getTranslation('description','en')) }}</textarea>
@@ -63,35 +76,11 @@
                             </div>
 
                             <div class="form-group">
-                                <h4>Second Slide Section</h4>
+                                <h4>Second Slide Section (Why Choose Us)</h4>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Title</label>
-                                <input type="text" name="second_title" class="form-control"
-                                    value="{{ old('second_title', $data->getTranslation('heading1','en')) }}" >
-                                <x-input-error name='second_title' />
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Arabic Title</label>
-                                <input type="text" name="ar_second_title" dir="rtl" class="form-control"
-                                    value="{{ old('ar_second_title', $data->getTranslation('heading1', 'ar')) }}" >
-                                <x-input-error name='ar_second_title' />
-                            </div>
-
-                            <div class="form-group position-relative error-l-50">
-                                <label>Description</label>
-                                <textarea class="form-control" id="engSubDescription" name="second_description" rows="2">{{ old('second_description', $data->getTranslation('content1','en')) }}</textarea>
-                                <x-input-error name='second_description' />
-                            </div>
-                            <div class="form-group position-relative error-l-50">
-                                <label>Arabic Description</label>
-                                <textarea class="form-control" id="arSubDescription" dir="rtl" name="ar_second_description" rows="2">{{ old('ar_second_description', $data->getTranslation('content1', 'ar')) }}</textarea>
-                                <x-input-error name='ar_second_description' />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x600 pixels)</span></label>
+                                <label for="exampleInputEmail1">Background Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x600 pixels)</span></label>
                                 <div class="input-group mb-3">
                                     <div class="custom-file">
                                         <input name="first_image" class="img" type="file" class="custom-file-input"
@@ -106,10 +95,6 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Current Image</label>
                                 <img class="img-custom form-control" src="{{ $data->getImage1('image1') }}" alt="">
-                            </div>
-
-                            <div class="form-group">
-                                <h4>Third Slide Section (Why Choose Us)</h4>
                             </div>
 
                             <div class="form-group">
@@ -137,7 +122,25 @@
                             </div>
 
                             <div class="form-group">
-                                <h4>Fourth Slide Section (Who We Are)</h4>
+                                <h4>Third Slide Section (Who We Are)</h4>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Background Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x600 pixels)</span></label>
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input name="second_image" class="img" type="file" class="custom-file-input"
+                                            id="image2" accept="image/*">
+                                        <label class="custom-file-label" for="image2">Choose
+                                            file</label>
+                                    </div>
+                                </div>
+                                <x-input-error name='second_image' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Current Image</label>
+                                <img class="img-custom form-control" src="{{ $data->getImage4() }}" alt="">
                             </div>
 
                             <div class="form-group">
@@ -165,8 +168,27 @@
                             </div>
 
                             <div class="form-group">
-                                <h4>Fifth Slide Section (What We Do)</h4>
+                                <h4>Fourth Slide Section (What We Do)</h4>
                             </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Background Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x600 pixels)</span></label>
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input name="third_image" class="img" type="file" class="custom-file-input"
+                                            id="image3" accept="image/*">
+                                        <label class="custom-file-label" for="image3">Choose
+                                            file</label>
+                                    </div>
+                                </div>
+                                <x-input-error name='third_image' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Current Image</label>
+                                <img class="img-custom form-control" src="{{ $data->getImage5() }}" alt="">
+                            </div>
+
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Title</label>
@@ -194,6 +216,24 @@
 
                             <div class="form-group">
                                 <h4>Vision & Mission</h4>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Background Image <span class="text-info">(Please upload an image with size less than 500 KB and dimensions 1920x600 pixels)</span></label>
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input name="fourth_image" class="img" type="file" class="custom-file-input"
+                                            id="image4" accept="image/*">
+                                        <label class="custom-file-label" for="image4">Choose
+                                            file</label>
+                                    </div>
+                                </div>
+                                <x-input-error name='fourth_image' />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Current Image</label>
+                                <img class="img-custom form-control" src="{{ $data->getImage6() }}" alt="">
                             </div>
 
                             <div class="form-group">
