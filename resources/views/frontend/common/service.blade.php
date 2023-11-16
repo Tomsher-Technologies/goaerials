@@ -44,8 +44,7 @@
             </div>
         </div>
         @if(request()->routeIs('home'))
-            <a class="scroll-down"  href="#partners"><span></span>Scroll</a>
-            <a href="#contact" id="scroll-down">
+            <a href="#partners" id="scroll-down">
                 <span class="arrow-down"></span>
                 <span class="scroll-text">Scroll</span>
             </a>
