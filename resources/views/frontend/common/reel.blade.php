@@ -26,7 +26,7 @@
         @if(request()->routeIs('home'))
             <a href="#contact" id="scroll-down">
                 <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
+                <span class="scroll-text">{{ __('Scroll') }}</span>
             </a>
         @endif
     </section>

@@ -22,7 +22,7 @@
             </div>
             <a href="#about-section-02" id="scroll-down">
                 <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
+                <span class="scroll-text">{{ __('Scroll') }}</span>
             </a>
         </section>
 
@@ -37,7 +37,7 @@
             </div>
             <a href="#about-section-03" id="scroll-down">
                 <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
+                <span class="scroll-text">{{ __('Scroll') }}</span>
             </a>
         </section>
 
@@ -52,7 +52,7 @@
             </div>
             <a href="#about-section-04" id="scroll-down">
                 <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
+                <span class="scroll-text">{{ __('Scroll') }}</span>
             </a>
         </section>
 
@@ -68,7 +68,7 @@
             
             <a href="#about-section-05" id="scroll-down">
                 <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
+                <span class="scroll-text">{{ __('Scroll') }}</span>
             </a>
         </section>
 
