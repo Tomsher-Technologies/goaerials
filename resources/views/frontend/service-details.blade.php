@@ -10,7 +10,7 @@
                             <!-- <div class="col-md-6">
                                 <img src="" class="img-fluid" alt="">
                             </div> -->
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <h4 class="pt-3">{{ $service->getTranslation('title') }}</h4>
                                 {!! $service->getTranslation('content') !!}
                             </div>
