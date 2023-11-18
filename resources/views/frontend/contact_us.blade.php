@@ -38,7 +38,7 @@
             </div>
             <a href="#contact-section-02" id="scroll-down">
                 <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
+                <span class="scroll-text">{{ __('Scroll') }}</span>
             </a>
         </section>
         <!-- Contact -->
@@ -72,7 +72,7 @@
                 </div>
                 <a href="#contact-section-0{{$i+1}}" id="scroll-down">
                     <span class="arrow-down"></span>
-                    <span class="scroll-text">Scroll</span>
+                    <span class="scroll-text">{{ __('Scroll') }}</span>
                 </a>
             </section>
             @php   $i++;  @endphp

@@ -23,7 +23,7 @@
             </div>
             <a href="#about" id="scroll-down">
                 <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
+                <span class="scroll-text">{{ __('Scroll') }}</span>
             </a>
         </section>
         <!-- About -->
@@ -51,7 +51,7 @@
             
             <a href="#services" id="scroll-down">
                 <span class="arrow-down"></span>
-                <span class="scroll-text">Scroll</span>
+                <span class="scroll-text">{{ __('Scroll') }}</span>
             </a>
         </section>
         <!-- Services -->

@@ -97,12 +97,12 @@
                      @if (getActiveLanguage() == 'en')
                            EN
                      @else
-                           AR
+                           أر
                      @endif
                      </button>
                      <ul class="dropdown-menu">
                        <li><a class="dropdown-item lang-change {{ (getActiveLanguage() == 'en') ? 'active' : '' }}" data-locale="en" href="#">EN</a></li>
-                       <li><a class="dropdown-item lang-change {{ (getActiveLanguage() == 'ar') ? 'active' : '' }}" data-locale="ar" href="#">AR</a></li>
+                       <li><a class="dropdown-item lang-change {{ (getActiveLanguage() == 'ar') ? 'active' : '' }}" data-locale="ar" href="#">أر</a></li>
                      </ul>
                   </div>
 
