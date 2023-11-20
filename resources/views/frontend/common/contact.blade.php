@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="row">
                        
-                        <h2 class="text-white mb-3">{{ $page->getTranslation('heading1') ?? '' }}</h2>
+                        <h2 class="text-white mb-3">{{ $page->getTranslation('heading2') ?? '' }}</h2>
                         
                             @php 
                                 $address12 = getFirstTwoAddress();
