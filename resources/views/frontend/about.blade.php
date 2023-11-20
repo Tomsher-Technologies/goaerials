@@ -97,6 +97,14 @@
                     </div>
                 </div>
             </div>
+            <div class="m-backtotop" aria-hidden="true">
+                <div class="arrow">
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+                <div class="text">
+                    {{ __('Back to top') }}
+                </div>
+            </div>
         </section>
     </div>
     <div class="progress-nav">
