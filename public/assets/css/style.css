@@ -1072,7 +1072,7 @@ h1 + .line{
   position: fixed;
   z-index: 10;
   top: 50%;
-  right:38px;
+  right:50px;
   transform: translate(0,-50%);
 }
 
@@ -6734,6 +6734,11 @@ section.contact-form-sec{
 
 @media (max-width: 576px){
 
+  h2.text-white.mb-3.linear-wipe {
+    font-size: 30px;
+    text-align:center;
+}
+
   .location-map iframe{
     height: 150px;
   }
@@ -6785,7 +6790,7 @@ section.contact-form-sec{
 
 .pp-scrollable .scroll-wrap {
 
-  bottom: 20px!important;
+  bottom: 20px;
 }
 
 #scroll-down .scroll-text {
@@ -6982,6 +6987,7 @@ section#why-choose {
 .section h2 {
   margin-top: 0;
   font-size: 28px;
+  text-align: center;
 }
 
 #pagepiling-about .pp-scrollable .scroll-wrap {
@@ -7081,7 +7087,7 @@ display: inline-block;
 position: absolute;
 padding-top: 80px;
 text-align: center;
-right:0;
+right:-17px;
 bottom: 135px;
 }
 .arrow-down {
@@ -7391,4 +7397,9 @@ End Down Arrow
   margin-bottom: 0!important;
 }
 
+
+h2.text-white.mb-3.linear-wipe {
+  font-size: 60px;
+  text-align: left;
+}
 
