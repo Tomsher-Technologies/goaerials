@@ -41,15 +41,6 @@ p.copy-right {
   margin: 0;
 }
 
-.pp-viewing-about p.copy-right, .pp-viewing-why-choose p.copy-right, .pp-viewing-reels p.copy-right{
-color: #000;
-}
-
-
-.pp-viewing-home p.copy-right{
-  display: none;
-}
-
 
 section#contact-form-sec{
   background-color: #000;
@@ -86,10 +77,10 @@ body{
   overflow-y: hidden;
 }
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   width: 8px;
   height: 8px;
-}
+} */
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
@@ -1081,15 +1072,15 @@ h1 + .line{
   position: fixed;
   z-index: 10;
   top: 50%;
-  right:1.5rem;
+  right:38px;
   transform: translate(0,-50%);
 }
 
-@media(min-width: 992px){
+/* @media(min-width: 992px){
   .progress-nav{
     right: 3rem;
   }
-}
+} */
 
 .progress-nav li{
   position: relative;
@@ -6249,7 +6240,7 @@ font-size: 3.725rem;
     
       .slide-panel-2 h3.stroke-title-two {
 
-        -webkit-text-stroke-color: #ffffff21;
+        -webkit-text-stroke-color: #fff;
         color: transparent;
         margin: 0;
     }
@@ -6503,29 +6494,15 @@ h5.reel-title {
 }
 
 .dropdown-menu {
-  min-width: 4.1rem!important;
+  min-width: 69.33px!important;
   border-radius: 0;
 }
 
-.pp-viewing-partners .copy-right a{
-  color: #fff;
-}
 
-.clients-page-body  .copy-right a{
-  color: #fff;
-}
 
-.reel-page-body p.copy-right{
-  color: #000000;
-}
 
-.contact-page-body .copy-right a{
-  color: #fff;
-}
 
-.contact-page-body.pp-viewing-about p.copy-right{
-  color: #fff;
-}
+
 
 #partners{
   background-image: url(../img/clients-bg.png);
@@ -6694,8 +6671,10 @@ section.contact-form-sec{
 }
 
 .service-detail-inner ul li{
- padding-bottom: 20px;
+ padding-bottom: 12px;
  color: #000;
+ font-size: 13px;
+ font-weight: 300;
 }
 
 
@@ -6707,9 +6686,20 @@ section.contact-form-sec{
 
 /* AR */
 
+[dir="rtl"] #scroll-down::before {
+
+  margin-left: -1px;
+}
+
 [dir="rtl"] #home .scroll-wrap {
   padding-right: 80px;
   padding-left: 0;
+}
+
+[dir="rtl"] #scroll-down {
+  left: 2px;
+  right: auto;
+
 }
 
 
@@ -6738,11 +6728,50 @@ section.contact-form-sec{
   padding-left: 40px;
 }
 
+[dir="rtl"] .dropdown .dropdown-toggle {
+  min-width: 69.33px;
+}
+
 @media (max-width: 576px){
+
+  .location-map iframe{
+    height: 150px;
+  }
+
+  [dir="rtl"] .progress-nav {
+    left: 1.5rem;
+    right: auto;
+    transform: translate(0,-50%);
+  }
+
+  [dir="rtl"] #home .scroll-wrap {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+  [dir="rtl"] .progress-nav .navbar-nav {
+    padding-right: 0;
+    padding-left: 0px;
+}
+
+
 
   #partners .scroll-wrap {
     vertical-align: bottom;
     bottom: 0;
+}
+
+.vision-mission img{
+  display: 50px;
+}
+
+.vision-mission .vision-mission-content {
+  padding: 15px;
+}
+
+.vision-mission p {
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .pp-scrollable .scroll-wrap{
@@ -6759,8 +6788,26 @@ section.contact-form-sec{
   bottom: 20px!important;
 }
 
-#scroll-down {
+#scroll-down .scroll-text {
   display: none!important;
+
+}
+
+#scroll-down {
+  right: 18px!important;
+  bottom: 20px!important;
+
+}
+
+[dir="rtl"] #scroll-down {
+  left: 18px!important;
+  bottom: 20px!important;
+  right: auto!important;
+}
+
+[dir="rtl"] #scroll-down::before {
+
+  margin-left: -1px;
 
 }
 
@@ -6774,12 +6821,12 @@ section.contact-form-sec{
 }
 
 h3.about-page-title {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 h3.stroke-title-two {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 a.project-box {
@@ -6806,6 +6853,19 @@ button.navbar-toggler {
     border: 0;
 }
 
+[dir="rtl"] button.navbar-toggler {
+  left: 0;
+  right: auto;
+
+}
+
+[dir="rtl"] .navbar-brand {
+  right: 0;
+  left: 0;
+  transform: translate(50%, -0)!important;
+
+}
+
 .navbar-brand {
   left: 0;
 }
@@ -6815,7 +6875,7 @@ button.navbar-toggler {
 }
 
   .panel {
-    padding: 15px;
+    padding: 0px;
 }
 
 .project-box {
@@ -6889,10 +6949,10 @@ svg#Layer_2 {
   line-height: 46px;
 }
 
-.about-page {
+/* .about-page {
   padding-top: 100px;
   padding-bottom: 50px;
-}
+} */
 
 .about-page p {
   font-size: 18px;
@@ -6916,7 +6976,7 @@ section#why-choose {
 } */
 
 .address-block {
-  padding: 15px;
+  padding:10px 15px;
 }
 
 .section h2 {
@@ -7021,7 +7081,7 @@ display: inline-block;
 position: absolute;
 padding-top: 80px;
 text-align: center;
-right: 2px;
+right:0;
 bottom: 135px;
 }
 .arrow-down {
@@ -7275,7 +7335,7 @@ End Down Arrow
 ===============
 */
 
-.service-detail-inner .col-md-6 {
+.service-detail-inner .col-md-12 {
   background-color: #ffffffa1;
   padding: 30px;
   border-radius: 10px;
