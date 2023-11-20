@@ -7060,6 +7060,9 @@ margin-top: 25px;
 font-size: 15px;
 letter-spacing: 1px;
 margin-right: 2px;
+position: absolute;
+right: -41px;
+top: 108px;
 
 }
 
@@ -7087,7 +7090,7 @@ display: inline-block;
 position: absolute;
 padding-top: 80px;
 text-align: center;
-right:-17px;
+right:51px;
 bottom: 135px;
 }
 .arrow-down {
@@ -7095,6 +7098,8 @@ display: block;
 margin: 0 auto;
 width: 14px;
 height: 25px;
+position: absolute;
+right: -7px;
 }
 .arrow-down:after {
 content: '';
@@ -7403,3 +7408,12 @@ h2.text-white.mb-3.linear-wipe {
   text-align: left;
 }
 
+
+
+.scroll-wrap h2{
+  background: #EA581B;
+background: linear-gradient(to right, #EA581B 0%, #f7a930 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
