@@ -859,18 +859,6 @@ header.main-header{
   color:#eb611c;
 }
 
-@media (min-width: 576px){
-  .navbar-mobile{
-    width: 50%;
-    max-width: 32rem;
-  }
-
-  .pp-scrollable .scroll-wrap {
-    padding-left: 0px;
-}
-
-
-}
 
 .navbar-mobile-footer{
   margin-top: auto;
@@ -1544,7 +1532,7 @@ h1 + .line{
 
 #home .scroll-wrap{
 vertical-align: bottom!important;
-bottom: 85px;
+bottom: 150px;
 }
 
 
@@ -6299,6 +6287,7 @@ margin-top: 0;
 .vision-mission .vision-mission-content {
 background-color: #f2f2f2;
 padding: 30px;
+min-height: 215px;
  }
 
  .vision-mission ul li{
@@ -6686,6 +6675,11 @@ section.contact-form-sec{
 
 /* AR */
 
+[dir="rtl"] h2.text-white.mb-3.linear-wipe {
+  font-size: 60px;
+  text-align: right;
+}
+
 [dir="rtl"] #scroll-down::before {
 
   margin-left: -1px;
@@ -6735,8 +6729,8 @@ section.contact-form-sec{
 @media (max-width: 576px){
 
   h2.text-white.mb-3.linear-wipe {
-    font-size: 30px;
-    text-align:center;
+    font-size: 30px!important;
+    text-align:center!important;
 }
 
   .location-map iframe{
@@ -6801,7 +6795,7 @@ section.contact-form-sec{
 
 #scroll-down {
   right: 18px!important;
-  bottom: 20px!important;
+  bottom: 40px!important;
 
 }
 
@@ -6987,13 +6981,13 @@ section#why-choose {
 
 .section h2 {
   margin-top: 0;
-  font-size: 28px;
+  font-size: 30px!important;
   text-align: center;
 }
 
-#pagepiling-about .pp-scrollable .scroll-wrap {
+/* #pagepiling-about .pp-scrollable .scroll-wrap {
   bottom: 150px;
-}
+} */
 
 }
 
@@ -7419,6 +7413,13 @@ font-size: 60px;
 
 }
 
+.page-title-2{
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #ffffff;
+  text-shadow: none;
+}
+
 .scroll__top{
   position: absolute;
   right: 28px;
@@ -7438,4 +7439,25 @@ font-size: 60px;
   text-align: center;
   margin: 12px auto;
   line-height: 48px;
+}
+
+
+@media (max-width: 576px){
+
+  .scroll-wrap h2 {
+    font-size: 30px!important;
+    line-height: 32px!important;
+}
+
+
+  .navbar-mobile{
+    width: 50%;
+    max-width: 32rem;
+  }
+
+  .pp-scrollable .scroll-wrap {
+    padding-left: 0px;
+}
+
+
 }
