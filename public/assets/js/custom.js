@@ -212,7 +212,7 @@ $(window).scroll(function() {
 		$(".m-backtotop").removeClass("active");
 		
 		//Just some cool text changes
-		$('h1 span').text('(start scrolling)')
+		//$('h1 span').text('(start scrolling)')
 	}
 });
 
