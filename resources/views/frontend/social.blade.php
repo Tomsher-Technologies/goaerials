@@ -10,7 +10,7 @@
                 <div class="scroll-wrap">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-10 offset-md-1">
+                            <div class="col-md-12">
                                 <div class="elfsight-app-f84ca65d-c8fd-4fb4-82ec-f9657e6473b1" data-elfsight-app-lazy></div>
                             </div>
                         </div>

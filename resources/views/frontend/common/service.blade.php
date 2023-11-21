@@ -31,7 +31,7 @@
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="container">
-                        <h2 class="text-white mb-3 linear-wipe">{{ $pageData->getTranslation('title') ?? '' }}</h2>
+                        <h2 class="text-white mb-3 linear-wipe page-title-2">{{ $pageData->getTranslation('title') ?? '' }}</h2>
                         <div class="mt-5">
                             <div class="row-project-box row g-2">
 
