@@ -16,7 +16,7 @@
                 <div class="scroll-wrap">
                     <div class="container">
                         <div class="row">
-                            <h2 class="text-white mb-3 text-center">{{ $pageData->getTranslation('title') ?? '' }}</h2>
+                            <h2 class="text-white mb-3 text-center page-title-2">{{ $pageData->getTranslation('title') ?? '' }}</h2>
                             <div class="col-md-8 m-auto">
                                 <div class="address-block h-100">
                                     @foreach($address12 as $onetwo)
@@ -84,7 +84,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8">
-                                <h2 class="text-white mb-4">{{ $page->getTranslation('heading2') ?? '' }}</h2>
+                                <h2 class="text-white mb-4 page-title-2">{{ $page->getTranslation('heading2') ?? '' }}</h2>
                                 <div class="location-map">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28900.433552758805!2d55.23635500000001!3d25.116948!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6e3f07d14f93%3A0x2d39c5b157232eb0!2sGo%20Aerials!5e0!3m2!1sen!2sve!4v1698982677410!5m2!1sen!2sve"
@@ -96,7 +96,7 @@
 
                             <div class="col-md-4">
 
-                                <h2 class="text-white mb-4">{{ $page->getTranslation('heading1') ?? '' }}</h2>
+                                <h2 class="text-white mb-4 page-title-2">{{ $page->getTranslation('heading1') ?? '' }}</h2>
                                 <div class="contact_form">
                                     <form class="row g-3" action="{{ route('store.contact') }}" method="POST"
                                         autocomplete="off">
@@ -138,9 +138,6 @@
                                 </div>
 
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>

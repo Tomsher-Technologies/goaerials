@@ -77,10 +77,10 @@ body{
   overflow-y: hidden;
 }
 
-/* ::-webkit-scrollbar{
-  width: 8px;
-  height: 8px;
-} */
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
@@ -1072,7 +1072,7 @@ h1 + .line{
   position: fixed;
   z-index: 10;
   top: 50%;
-  right:50px;
+  right:20px;
   transform: translate(0,-50%);
 }
 
@@ -6697,7 +6697,7 @@ section.contact-form-sec{
 }
 
 [dir="rtl"] #scroll-down {
-  left: 2px;
+  left: 21px;
   right: auto;
 
 }
@@ -6718,14 +6718,14 @@ section.contact-form-sec{
 }
 
 [dir="rtl"] .progress-nav {
-  left: 3rem;
+  left: 20px;
   right: auto;
   transform: translate(0,-50%);
 }
 
 [dir="rtl"] .progress-nav .navbar-nav{
   padding-right: 0;
-  padding-left: 40px;
+  padding-left: 0px;
 }
 
 [dir="rtl"] .dropdown .dropdown-toggle {
@@ -6772,6 +6772,7 @@ section.contact-form-sec{
 
 .vision-mission .vision-mission-content {
   padding: 15px;
+  min-height: 215px;
 }
 
 .vision-mission p {
@@ -7061,7 +7062,7 @@ font-size: 15px;
 letter-spacing: 1px;
 margin-right: 2px;
 position: absolute;
-right: -41px;
+right: -39px;
 top: 108px;
 
 }
@@ -7090,7 +7091,7 @@ display: inline-block;
 position: absolute;
 padding-top: 80px;
 text-align: center;
-right:51px;
+right:21px;
 bottom: 135px;
 }
 .arrow-down {
@@ -7409,11 +7410,32 @@ h2.text-white.mb-3.linear-wipe {
 }
 
 
-
 .scroll-wrap h2{
   background: #EA581B;
 background: linear-gradient(to right, #EA581B 0%, #f7a930 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+font-size: 60px;
 
+}
+
+.scroll__top{
+  position: absolute;
+  right: 28px;
+  bottom: 30px;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: block;
+}
+
+.scroll__top svg {
+  height: 28px;
+  width: 40px;
+  display: block;
+  margin-top: 11px;
+  text-align: center;
+  margin: 12px auto;
+  line-height: 48px;
 }
