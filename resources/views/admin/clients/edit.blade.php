@@ -32,13 +32,13 @@
                                 <label for="exampleInputEmail1">Image <span class="text-info">(Please upload an image with size less than 200 KB and dimensions 150x45 pixels)</span></label>
                                 <div class="input-group mb-3">
                                     <div class="custom-file">
-                                        <input name="imgage" id="img" type="file" class="custom-file-input"
+                                        <input name="image" id="img" type="file" class="custom-file-input"
                                             id="inputGroupFile02" accept="image/*">
                                         <label class="custom-file-label" id="imgname" for="inputGroupFile02">Choose
                                             file</label>
                                     </div>
                                 </div>
-                                <x-input-error name='imgage' />
+                                <x-input-error name='image' />
                             </div>
 
                             <div class="form-group">
