@@ -158,9 +158,8 @@ class ServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Request $request)
+    public function destroy(Services $service)
     {
-        $service = Services::find($request->service);
         $img = $service->image;
         if ($service->delete()) {
             deleteImage($img);

@@ -17,7 +17,7 @@
                         $html .= "<div class='col-project-box col-6 col-md-6 col-lg-4 col-xl-4'>
                                     <a href='".route('service-details',['slug' => $serv->slug]) ."'' class='project-box'>
                                         <div class='project-box-inner'>
-                                            <h4 class=''>". $serv->getTranslation('title') ."</h4>
+                                            <h4 class=''>". mb_strimwidth(strip_tags($serv->getTranslation('title')), 0, 50, '...') ."</h4>
                                             <div class='project-category'>". __('View More') ."</div>
                                         </div>
                                     </a>

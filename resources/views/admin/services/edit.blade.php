@@ -90,10 +90,16 @@
 
                             <button type="submit" class="btn btn-primary mb-0">Update</button>
                             <a href="{{ route('admin.services.index') }}" class="btn btn-info mb-0"> Cancel</a>
+                            <button type="button" id="delete" class="btn btn-danger mb-0 float-right">Delete</button>
                         </form>
                     </div>
                 </div>
-               
+                <form id="deleteForm" method="POST" action="{{ route('admin.services.destroy', [
+                    'service' => $service,
+                ]) }}" enctype="multipart/form-data">
+                    @csrf
+                    @method('DELETE')
+                </form>
 
             </div>
         </div>

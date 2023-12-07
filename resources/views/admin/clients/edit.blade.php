@@ -47,6 +47,13 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Link</label>
+                                <input type="text" name="link" class="form-control"
+                                    value="{{ old('link', $client->link) }}">
+                                <x-input-error name='link' />
+                            </div>
+
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Sort Order</label>
                                 <input type="number" name="sort_order" class="form-control"
                                     value="{{ old('sort_order', $client->sort_order) }}">
