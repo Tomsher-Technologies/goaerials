@@ -15,6 +15,7 @@ class Clients extends Model
         'image',
         'sort_order',
         'status',
+        'link'
     ];
 
     public function getImage()

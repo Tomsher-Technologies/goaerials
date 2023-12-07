@@ -5,9 +5,9 @@
             <div class="col-12">
                 <h1>All Services</h1>
                 <div class="text-zero top-right-button-container">
-                    <!-- <a href="{{ route('admin.services.create') }}"
+                    <a href="{{ route('admin.services.create') }}"
                         class="btn btn-primary btn-lg top-right-button mr-1 text-uppercase">ADD NEW
-                        Service</a> -->
+                        Service</a>
                 </div>
                 <div class="separator mb-5"></div>
             </div>

@@ -46,6 +46,7 @@ class ClientsController extends Controller
         $data = [
             'name'=> $request->name,
             'sort_order' => ($request->sort_order != '') ? $request->sort_order : 0,
+            'link' => $request->link,
             'status' => $request->status,
         ];
 
@@ -93,6 +94,7 @@ class ClientsController extends Controller
         $client->name = $request->name;
         $client->sort_order = ($request->sort_order != '') ? $request->sort_order : 0;
         $client->status = $request->status;
+        $client->link = $request->link;
 
         if ($request->hasFile('image')) {
             $image = uploadImage($request, 'image', 'client');
