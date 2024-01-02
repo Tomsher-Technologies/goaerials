@@ -6675,6 +6675,12 @@ section.contact-form-sec{
 
 /* AR */
 
+
+
+[dir="rtl"] span.scroll-text {
+  width: 70px;
+}
+
 [dir="rtl"] h2.text-white.mb-3.linear-wipe {
   font-size: 60px;
   text-align: right;
@@ -7405,10 +7411,10 @@ h2.text-white.mb-3.linear-wipe {
 
 
 .scroll-wrap h2{
-  background: #EA581B;
-background: linear-gradient(to right, #EA581B 0%, #f7a930 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+/*  background: #EA581B;*/
+/*background: linear-gradient(to right, #EA581B 0%, #f7a930 100%);*/
+/*-webkit-background-clip: text;*/
+/*-webkit-text-fill-color: transparent;*/
 font-size: 60px;
 
 }
@@ -7460,4 +7466,9 @@ font-size: 60px;
 }
 
 
+}
+
+
+button.btn.btn-secondary.dropdown-toggle {
+    background: #fff;
 }
