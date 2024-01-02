@@ -1035,7 +1035,7 @@ h1 + .line{
 
 .pp-scrollable .intro{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   white-space: nowrap;
 }
 
@@ -6304,7 +6304,6 @@ min-height: 215px;
 
 #home h1 {
   font-size: 65px;
-  display: inline-block;
 }
 
 @media (min-width: 991.98px) and (max-width: 1399.98px) {
@@ -6676,23 +6675,11 @@ section.contact-form-sec{
 
 /* AR */
 
-[dir="rtl"] .scroll__top {
-  left: 28px;
-  right: auto;
-
-}
-
-p.copy-right {
-  left: 60px;
-  right: auto;
-}
 
 
 [dir="rtl"] span.scroll-text {
-  
-  min-width: 70px;
-  
-  }
+  width: 70px;
+}
 
 [dir="rtl"] h2.text-white.mb-3.linear-wipe {
   font-size: 60px;
@@ -6773,13 +6760,14 @@ p.copy-right {
 }
 
 
+
   #partners .scroll-wrap {
     vertical-align: bottom;
     bottom: 0;
 }
 
 .vision-mission img{
-  height: 80px;
+  display: 50px;
 }
 
 .vision-mission .vision-mission-content {
@@ -6796,9 +6784,9 @@ p.copy-right {
   vertical-align: middle!important;
 }
 
-/* .pp-section{
+.pp-section{
   height: 100vh;
-} */
+}
 
 
 .pp-scrollable .scroll-wrap {
@@ -6818,8 +6806,8 @@ p.copy-right {
 }
 
 [dir="rtl"] #scroll-down {
-  left: 25px!important;
-  bottom: 40px!important;
+  left: 18px!important;
+  bottom: 20px!important;
   right: auto!important;
 }
 
@@ -7423,10 +7411,10 @@ h2.text-white.mb-3.linear-wipe {
 
 
 .scroll-wrap h2{
-  background: #EA581B;
-background: linear-gradient(to right, #EA581B 0%, #f7a930 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+/*  background: #EA581B;*/
+/*background: linear-gradient(to right, #EA581B 0%, #f7a930 100%);*/
+/*-webkit-background-clip: text;*/
+/*-webkit-text-fill-color: transparent;*/
 font-size: 60px;
 
 }
@@ -7467,10 +7455,6 @@ font-size: 60px;
     line-height: 32px!important;
 }
 
-/* .scroll-wrap{
-  height: 100vh;
-} */
-
 
   .navbar-mobile{
     width: 50%;
@@ -7479,17 +7463,12 @@ font-size: 60px;
 
   .pp-scrollable .scroll-wrap {
     padding-left: 0px;
-    right: 6px;
 }
 
 
-[dir="rtl"] .pp-scrollable .scroll-wrap {
-  left: 6px;
-  right: auto;
 }
 
 
-
-
-
+button.btn.btn-secondary.dropdown-toggle {
+    background: #fff;
 }
