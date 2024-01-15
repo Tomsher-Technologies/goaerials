@@ -1,13 +1,13 @@
 @extends('layouts.app.app')
 @section('content')
     <div id="pagepiling-about">
-        <section id="about-section-01" class="about-page section pp-scrollable position-absolute">
+        <section id="about-section-01" class="about-page section pp-scrollable position-absolute panel">
             <video autoplay muted loop playsinline id="myVideo">
                 <source src="{{$page->video_link}}" type="video/mp4">
             </video>
             <div class="intro">
                 <div class="scroll-wrap">
-                    <div class="container">
+                    {{-- <div class="container"> --}}
                         <div class="row">
                             <div class="col-md-12">
                                 <h2>
@@ -17,7 +17,7 @@
                                 {!! $page->getTranslation('description') ?? '' !!}
                             </div>
                         </div>
-                    </div>
+                    {{-- </div> --}}
                 </div>
             </div>
             <a href="#about-section-02" id="scroll-down">
