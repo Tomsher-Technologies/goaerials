@@ -33,7 +33,8 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|max:1024',
+            // 'image' => 'required|max:1024',
+            'image' => 'required',
             'title' => 'required',
             'ar_title' => 'required',
             'content' => 'required',
@@ -41,7 +42,7 @@ class ServiceController extends Controller
             'sort_order' => 'nullable|integer',
             'status' => 'required',
         ],[
-            'image.uploaded' => 'File size should be less than 1 MB',
+            // 'image.uploaded' => 'File size should be less than 1 MB',
             '*.required' => 'This field is required'
         ]);
 
@@ -55,20 +56,21 @@ class ServiceController extends Controller
         }
         
          $saveData = [
-            'title' => $request->title,
-            'ar_title' => $request->ar_title,
-            'content' => $request->content,
-            'ar_content' => $request->ar_content,
-            'status' => $request->status,
-            'slug' => $slug,
-            'blog_date' => $request->news_date,
-            'seo_title' => $request->seotitle,
-            'og_title' => $request->ogtitle, 
-            'twitter_title' => $request->twtitle, 
-            'seo_description' => $request->seodescription, 
-            'og_description' => $request->og_description, 
-            'twitter_description' => $request->twitter_description, 
-            'keywords' => $request->seokeywords
+            'title'                 => $request->title,
+            'ar_title'              => $request->ar_title,
+            'content'               => $request->content,
+            'ar_content'            => $request->ar_content,
+            'status'                => $request->status,
+            'sort_order'            => ($request->sort_order != '') ? $request->sort_order : 0,
+            'slug'                  => $slug,
+            'blog_date'             => $request->news_date,
+            'seo_title'             => $request->seotitle,
+            'og_title'              => $request->ogtitle, 
+            'twitter_title'         => $request->twtitle, 
+            'seo_description'       => $request->seodescription, 
+            'og_description'        => $request->og_description, 
+            'twitter_description'   => $request->twitter_description, 
+            'keywords'              => $request->seokeywords
         ];
         
         $service = Services::create($saveData);
@@ -106,7 +108,8 @@ class ServiceController extends Controller
     {
         $service = Services::find($request->service);
         $request->validate([
-            'image' => 'nullable|max:1024',
+            // 'image' => 'nullable|max:1024',
+            'image' => 'nullable',
             'title' => 'required',
             'ar_title' => 'required',
             'content' => 'required',
@@ -114,7 +117,7 @@ class ServiceController extends Controller
             'sort_order' => 'nullable|integer',
             'status' => 'required',
         ],[
-            'image.uploaded' => 'File size should be less than 1 MB'
+            // 'image.uploaded' => 'File size should be less than 1 MB'
         ]);
         $title = $service->title;
         $slug = $service->slug;

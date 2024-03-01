@@ -39,7 +39,8 @@ class ReelsController extends Controller
         // echo php_info();
         // die;
         $request->validate([
-            'image' => 'required|max:1024',
+            // 'image' => 'required|max:1024',
+            'image' => 'required',
             'title' => 'required',
             'ar_title' => 'required',
             'video' => 'required',
@@ -47,7 +48,7 @@ class ReelsController extends Controller
             'status' => 'required'
         ],[
             'ar_title.required' => 'The arabic title field is required.',
-            'image.uploaded' => 'File size should be less than 1 MB'
+            // 'image.uploaded' => 'File size should be less than 1 MB'
         ]);
         $data = [
             'title' => $request->title,
@@ -92,7 +93,8 @@ class ReelsController extends Controller
     public function update(Request $request, Reels $reel)
     {
         $request->validate([
-            'image' => 'nullable|max:1024',
+            // 'image' => 'nullable|max:1024',
+            'image' => 'nullable',
             'title' => 'required',
             'ar_title' => 'required',
             // 'link' => 'required',
@@ -100,7 +102,7 @@ class ReelsController extends Controller
             'status' => 'required'
         ],[
             'ar_title.required' => 'The arabic title field is required.',
-            'image.uploaded' => 'File size should be less than 1 MB'
+            // 'image.uploaded' => 'File size should be less than 1 MB'
         ]);
        
         $reel->title = $request->title;
