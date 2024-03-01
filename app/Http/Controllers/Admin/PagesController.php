@@ -48,14 +48,16 @@ class PagesController extends Controller
                         'ar_about_title' => 'required',
                         'about_description' => 'required',
                         'ar_about_description' => 'required',
-                        'about_image' => 'nullable|max:1024',
+                        'about_image' => 'nullable',
+                        // 'about_image' => 'nullable|max:1024',
                         'choose_title' => 'required',
                         'ar_choose_title' => 'required',
-                        'main_image' => 'nullable|max:1024'
+                        'main_image' => 'nullable'
+                        // 'main_image' => 'nullable|max:1024'
                     ],[
                         '*.required' => 'This field is required.',
-                        'about_image.uploaded' => "Maximum file size to upload is 1 MB.",
-                        'main_image.uploaded' => "Maximum file size to upload is 1 MB.",
+                        // 'about_image.uploaded' => "Maximum file size to upload is 1 MB.",
+                        // 'main_image.uploaded' => "Maximum file size to upload is 1 MB.",
                     ]);
         $data = [
                 'page_title'        => 'Home',
@@ -252,16 +254,22 @@ class PagesController extends Controller
                         'ar_mission_heading' => 'required',
                         'mission_content' => 'required',
                         'ar_mission_content' => 'required',
-                        'first_image' => 'nullable|max:1024',
-                        'second_image' => 'nullable|max:1024',
-                        'third_image' => 'nullable|max:1024',
-                        'fourth_image' => 'nullable|max:1024',
-                        'vision_image' => 'nullable|max:1024',
-                        'mission_image' => 'nullable|max:1024',
+                        // 'first_image' => 'nullable|max:1024',
+                        // 'second_image' => 'nullable|max:1024',
+                        // 'third_image' => 'nullable|max:1024',
+                        // 'fourth_image' => 'nullable|max:1024',
+                        // 'vision_image' => 'nullable|max:1024',
+                        // 'mission_image' => 'nullable|max:1024',
+                        'first_image' => 'nullable',
+                        'second_image' => 'nullable',
+                        'third_image' => 'nullable',
+                        'fourth_image' => 'nullable',
+                        'vision_image' => 'nullable',
+                        'mission_image' => 'nullable',
                         'video_link' => 'nullable'
                     ],[
                         '*.required' => 'This field is required.',
-                        '*.uploaded' => "Maximum file size to upload is 1 MB."
+                        // '*.uploaded' => "Maximum file size to upload is 1 MB."
                     ]);
         $data = [
                 'page_title'            => 'About Us',
@@ -475,10 +483,11 @@ class PagesController extends Controller
                         'ar_heading' => 'required',
                         'map_heading' => 'required',
                         'ar_map_heading' => 'required',
-                        'first_image' => 'nullable|max:1024'
+                        'first_image' => 'nullable'
+                        // 'first_image' => 'nullable|max:1024'
                     ],[
                         '*.required' => 'This field is required.',
-                        '*.uploaded' => "Maximum file size to upload is 1 MB."
+                        // '*.uploaded' => "Maximum file size to upload is 1 MB."
                     ]);
         $data = [
                 'page_title'        => 'Contact Us',
@@ -599,10 +608,11 @@ class PagesController extends Controller
         $request->validate([
                         'title' => 'required',
                         'ar_title' => 'required',
-                        'image1' => 'nullable|max:2048'
+                        'image1' => 'nullable'
+                        // 'image1' => 'nullable|max:2048'
                     ],[
                         '*.required' => 'This field is required.',
-                        '*.max' => "Maximum file size to upload is 2MB."
+                        // '*.max' => "Maximum file size to upload is 2MB."
                     ]);
         $data = [
                 'page_title'        => 'News',
@@ -641,9 +651,10 @@ class PagesController extends Controller
     public function storeSocialPage(Request $request)
     {
         $request->validate([
-            'background_image' => 'nullable|max:1024'
+            'background_image' => 'nullable'
+            // 'background_image' => 'nullable|max:1024'
         ],[
-            'background_image.uploaded' => "Maximum file size to upload is 1 MB."
+            // 'background_image.uploaded' => "Maximum file size to upload is 1 MB."
         ]);
        
         $data = [

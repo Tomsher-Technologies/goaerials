@@ -36,12 +36,13 @@ class ClientsController extends Controller
     {
 
         $request->validate([
-            'image' => 'required|max:1024',
+            // 'image' => 'required|max:1024',
+            'image' => 'required',
             'name' => 'required',
             'sort_order' => 'nullable|integer',
             'status' => 'required',
         ],[
-            'image.uploaded' => 'File size should be less than 1 MB'
+            // 'image.uploaded' => 'File size should be less than 1 MB'
         ]);
         $data = [
             'name'=> $request->name,
@@ -83,12 +84,13 @@ class ClientsController extends Controller
     public function update(Request $request, Clients $client)
     {
         $request->validate([
-            'image' => 'nullable|max:1024',
+            // 'image' => 'nullable|max:1024',
+            'image' => 'nullable',
             'name' => 'required',
             'sort_order' => 'nullable|integer',
             'status' => 'required',
         ],[
-            'image.uploaded' => 'File size should be less than 1 MB'
+            // 'image.uploaded' => 'File size should be less than 1 MB'
         ]);
 
         $client->name = $request->name;
