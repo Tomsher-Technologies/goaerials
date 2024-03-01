@@ -174,6 +174,11 @@ textarea.form-control {
     min-height: 75px;
 }
 
+.btn{
+    border: 0.2em solid #ffffff !important;
+    background: #fff !important;
+}
+
 .contact-section a {
   color: #fff !important;;
   font-size: 14px !important;;
