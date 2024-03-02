@@ -14,6 +14,7 @@
         
     <link rel="stylesheet" href="{{ asset('assets/css/jquery.pagepiling.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
     <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <title>Go Aerials</title>
@@ -51,7 +52,7 @@
     <script src="{{ asset('assets/js/jquery.pagepiling.min.js') }}"></script>
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    
+    <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.youtube-background.js_v=1.0.18') }}"></script>
 
     @stack('footer')
@@ -61,6 +62,9 @@
         });
     </script>
     <script>
+        AOS.init();
+
+        
         let status = false;
         var activeLang = '{{ getActiveLanguage() }}';
         if(activeLang != 'en'){

@@ -69,12 +69,20 @@ html{
 }
 
 body{
-  font-family: 'Days Regular'!important;
+  font-family: 'Days Regular';
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.625em;
   color:#767676;
   overflow-y: hidden;
+}
+
+p, a{
+ font-family: 'Montserrat';
+ font-weight: 500;
+}
+li{
+ font-family: 'Montserrat';
 }
 
 ::-webkit-scrollbar{
@@ -1088,7 +1096,7 @@ h1 + .line{
   height: 0;
   content: '';
   transition:all .3s ease;
-   background-color: #ea581b;
+   background-color: #000;
 }
 
 .progress-nav li:before{
@@ -1539,7 +1547,7 @@ bottom: 150px;
 #about p{
   font-size: 15px;
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .degrade {
@@ -7471,4 +7479,18 @@ font-size: 60px;
 
 button.btn.btn-secondary.dropdown-toggle {
     background: #fff;
+}
+
+.project-category {
+ font-family: 'Montserrat';
+}
+
+.service-detail-inner ul li {
+  padding-bottom: 13px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.item.slider-div {
+  background-color: #ffffff4a !important;
 }
