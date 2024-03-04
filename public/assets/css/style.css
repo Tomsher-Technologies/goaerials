@@ -6775,7 +6775,7 @@ section.contact-form-sec{
 }
 
 .vision-mission img{
-  display: 50px;
+  height: 80px;
 }
 
 .vision-mission .vision-mission-content {
@@ -7459,8 +7459,8 @@ font-size: 60px;
 @media (max-width: 576px){
 
   .scroll-wrap h2 {
-    font-size: 30px!important;
-    line-height: 32px!important;
+    font-size: 20px!important;
+    line-height: 22px!important;
 }
 
 
@@ -7472,6 +7472,23 @@ font-size: 60px;
   .pp-scrollable .scroll-wrap {
     padding-left: 0px;
 }
+
+.contact_form {
+  padding: 15px;
+}
+        .form-control, textarea.form-control{
+        height: 20px;
+    }
+    
+    textarea.form-control {
+  min-height: 25px !important;
+}
+
+.col-md-6.mob-flex {
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 }
@@ -7494,3 +7511,30 @@ button.btn.btn-secondary.dropdown-toggle {
 .item.slider-div {
   background-color: #ffffff4a !important;
 }
+
+textarea.form-control {
+  min-height: 45px !important;
+}
+/*.section:not(#home) .intro{*/
+/*            opacity: 0;*/
+/*            transform:translateY(-40px);*/
+/*            transition:all 0.9s;*/
+/*          }*/
+          
+/*          .section:not(#home) .intro.animate{*/
+/*            opacity: 1;*/
+/*            transform:translateY(0);*/
+/*          }*/
+
+@media (min-width: 1200px) and (max-width: 1400px) { 
+
+
+    .scroll-wrap h2{
+        font-size: 40px;
+    }
+    
+        .form-control, textarea.form-control{
+        height: 25px;
+    }
+
+ }
