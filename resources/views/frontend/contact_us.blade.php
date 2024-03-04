@@ -88,7 +88,7 @@
                                 <div class="location-map">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28900.433552758805!2d55.23635500000001!3d25.116948!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6e3f07d14f93%3A0x2d39c5b157232eb0!2sGo%20Aerials!5e0!3m2!1sen!2sve!4v1698982677410!5m2!1sen!2sve"
-                                        width="100%" height="330" style="border:0;" allowfullscreen="" loading="lazy"
+                                        width="100%" height="391" style="border:0;" allowfullscreen="" loading="lazy"
                                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
 
