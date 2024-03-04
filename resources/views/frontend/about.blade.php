@@ -76,14 +76,14 @@
             <div class="intro">
                 <div class="scroll-wrap">
                     <div class="row g-3 align-items-center">
-                        <div class="col-md-6">
-                            <div class="vision-mission-content">
+                        <div class="col-md-6 mob-flex">
+                            <div class="vision-mission-content order-2 order-md-1">
                                 <h3 class="section-heading section-heading-dark">
                                     <span>01.</span> {!! $page->getTranslation('heading5') ?? '' !!}
                                 </h3>
                                 {!! $page->getTranslation('content5') ?? '' !!}
                             </div>
-                            <img src="{{ asset($page->getImage2()) }}" class="img-fluid" alt="" />
+                            <img src="{{ asset($page->getImage2()) }}" class="img-fluid order-1 order-md-2" alt="" />
                         </div>
                         <div class="col-md-6">
                             <img src="{{ asset($page->getImage3()) }}" class="img-fluid" alt="" />
