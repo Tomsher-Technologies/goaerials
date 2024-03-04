@@ -13,7 +13,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-6 col-xl-12">
-                                <h1 class="text-white" data-aos="fade-up" data-aos-anchor-placement="top-bottom"  data-aos-duration="3000"> 
+                                <h1 class="text-white" > 
                                 {!! $page->getTranslation('title') ?? '' !!}
                                 </h1>
                             </div>
