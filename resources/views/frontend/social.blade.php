@@ -4,7 +4,7 @@
     @php 
         $pageData = getPageData('social');
     @endphp
-    <div id="pagepiling">
+    <div id="pagepiling-social">
         <section id="contact-form-sec" class="section pp-scrollable position-absolute" style="background-image:url('{{ asset($pageData->image1) }}') !important;">
             <div class="intro">
                 <div class="scroll-wrap">
