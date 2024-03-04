@@ -92,7 +92,7 @@
                   </nav>
                </div>
                <div class="col-6 col-md-1 order-1 order-md-3">
-                  <div class="dropdown">
+                  {{-- <div class="dropdown">
                      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                      @if (getActiveLanguage() == 'en')
                            EN
@@ -104,7 +104,7 @@
                        <li><a class="dropdown-item lang-change {{ (getActiveLanguage() == 'en') ? 'active' : '' }}" data-locale="en" href="#">EN</a></li>
                        <li><a class="dropdown-item lang-change {{ (getActiveLanguage() == 'ar') ? 'active' : '' }}" data-locale="ar" href="#">أر</a></li>
                      </ul>
-                  </div>
+                  </div> --}}
 
 
                   <!-- <div class="d-flex align-items-center">
