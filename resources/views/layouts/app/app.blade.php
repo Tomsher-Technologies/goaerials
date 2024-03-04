@@ -49,7 +49,7 @@
     <!-- Optional JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script> --}}
     <script src="{{ asset('assets/js/jquery.pagepiling.min.js') }}"></script>
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
