@@ -50,7 +50,9 @@ function uploadImage(Request $request, $input, $path, $uniqueName = true)
 {
     if ($request->hasFile($input)) {
         $uploadedFile = $request->file($input);
-        $filename =   time() . $uploadedFile->getClientOriginalName();
+        $extension = $uploadedFile->getClientOriginalExtension();
+        $filename = Str::random(2).time().'.'.$extension;
+       
         if (!$uniqueName) {
             $filename = $uploadedFile->getClientOriginalName();
         }
